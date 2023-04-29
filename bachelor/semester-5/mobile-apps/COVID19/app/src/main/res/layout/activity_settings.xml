@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@drawable/bg_gradient">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="@string/home_page"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spiner_countryCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner"
+                android:popupBackground="@drawable/dropdown"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="100dp"
+                android:dropDownWidth="match_parent"
+                android:layout_marginTop="12dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:text="@string/last_update"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Switch
+                        android:id="@+id/switch_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:text="@string/confirmed"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Switch
+                        android:id="@+id/switch_confirmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:text="@string/recovered"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Switch
+                        android:id="@+id/switch_recovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:text="@string/critical"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Switch
+                        android:id="@+id/switch_critical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:text="@string/deaths"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Switch
+                        android:id="@+id/switch_deaths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SCBSwitch"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

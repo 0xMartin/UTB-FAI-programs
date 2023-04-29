@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".GlobalActivity"
+    app:theme="@style/SearchViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView_update_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:textAlignment="center"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart_total"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <SearchView
+            android:id="@+id/searchView_countries"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ListView
+            android:id="@+id/listView_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

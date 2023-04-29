@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../../home/martin/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.30833333333333335" />
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.3619791666666667" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/bg_gradient.xml" value="0.1300925925925926" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/border.xml" value="0.24027777777777778" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/round_bg.xml" value="0.24027777777777778" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/rounded_corner.xml" value="0.24027777777777778" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/switch_thumb.xml" value="0.24027777777777778" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/drawable/value_view.xml" value="0.1300925925925926" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/activity_global.xml" value="0.22592592592592592" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/activity_home.xml" value="0.29036004645760743" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/activity_listview.xml" value="0.1" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/activity_settings.xml" value="0.264" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/activity_statistics.xml" value="0.2" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/bg_gradient.xml" value="0.10324074074074074" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/item_country.xml" value="0.264" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/rounded_corner.xml" value="0.21342592592592594" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/layout/spash_screen.xml" value="0.24010416666666667" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
+        <entry key="..\:/Skola/Semestr5/MobilniApp/COVID19/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/drawable/bg_gradient.xml" value="0.3226851851851852" />
+        <entry key="app/src/main/res/drawable/border.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/drawable/dropdown.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/drawable/spinner.xml" value="0.3226851851851852" />
+        <entry key="app/src/main/res/drawable/value_view.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/layout-v28/activity_main.xml" value="0.346875" />
+        <entry key="app/src/main/res/layout/activity_global.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.27943840579710144" />
+        <entry key="app/src/main/res/layout/activity_statistics.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_country.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/item_spinner_dropdown.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17824074074074073" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.18472222222222223" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
