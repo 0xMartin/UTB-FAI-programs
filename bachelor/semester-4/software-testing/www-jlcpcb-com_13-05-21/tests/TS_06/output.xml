@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on linux)" generated="20210513 20:41:53.686" rpa="false">
+<suite id="s1" name="TS 06" source="/home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/TS_06/TS_06.robot">
+<kw name="TS_06 Precondition" type="setup">
+<kw name="Open Browser With URL" library="keywords">
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>${PAGE_ORDER_URL}</arg>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:53.847" level="INFO">Opening browser 'Chrome' to base url 'https://cart.jlcpcb.com'.</msg>
+<status status="PASS" starttime="20210513 20:41:53.847" endtime="20210513 20:41:57.385"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:57.386" endtime="20210513 20:41:57.451"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:53.847" endtime="20210513 20:41:57.451"></status>
+</kw>
+<kw name="Init Tests" library="settings">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210513 20:41:57.451" endtime="20210513 20:41:57.748"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELENIUM_SPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:57.748" endtime="20210513 20:41:57.748"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${SCREENSHOT_DIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:57.748" endtime="20210513 20:41:57.749"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:57.451" endtime="20210513 20:41:57.749"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_ACCEPT_COOKIES_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:58.725" level="INFO">Element '//button[@ng-click="accept()"]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:57.749" endtime="20210513 20:41:58.726"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:58.726" endtime="20210513 20:41:59.186"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:59.188" level="INFO">Simulating Mouse Over on element '//button[@ng-click="accept()"]'.</msg>
+<status status="PASS" starttime="20210513 20:41:59.187" endtime="20210513 20:41:59.895"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:59.895" level="INFO">Clicking element '//button[@ng-click="accept()"]'.</msg>
+<status status="PASS" starttime="20210513 20:41:59.895" endtime="20210513 20:42:00.378"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:57.749" endtime="20210513 20:42:00.378"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:53.846" endtime="20210513 20:42:00.378"></status>
+</kw>
+<test id="s1-t1" name="TS_06-03 – Vyber rozmeru sablony">
+<kw name="Click On" library="keywords" type="setup">
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_TYPE_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:00.833" level="INFO">Element '//a[contains(text(),'SMT-Stencil')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:42:00.380" endtime="20210513 20:42:00.833"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:42:00.833" endtime="20210513 20:42:01.269"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:01.270" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'SMT-Stencil')]'.</msg>
+<status status="PASS" starttime="20210513 20:42:01.270" endtime="20210513 20:42:01.976"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:01.977" level="INFO">Clicking element '//a[contains(text(),'SMT-Stencil')]'.</msg>
+<status status="PASS" starttime="20210513 20:42:01.976" endtime="20210513 20:42:02.510"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:00.380" endtime="20210513 20:42:02.511"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_DIMENSION_XPATH}</arg>
+<arg>${TC_03_DIMENSION}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:02.512" level="INFO">Selecting options from selection list '//select[@id='steelmeshSellingPriceRecordNum']' by label 460*460(Valid area 380mm*430mm, $20.00 ,1.95kg).</msg>
+<status status="PASS" starttime="20210513 20:42:02.512" endtime="20210513 20:42:04.121"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210513 20:42:06.123" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210513 20:42:04.122" endtime="20210513 20:42:06.123"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PRICE_XPATH}</arg>
+<arg>${TC_03_PRICE}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:06.603" level="INFO">Element '//strong[@class="ver ng-binding"]' contains text '$20.00'.</msg>
+<status status="PASS" starttime="20210513 20:42:06.124" endtime="20210513 20:42:06.603"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WEIGHT_XPATH}</arg>
+<arg>${TC_03_WEIGHT}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:07.062" level="INFO">Element '//div[@class="pt10"]/span[@class="pull-right ng-binding"]' contains text '1.95kg'.</msg>
+<status status="PASS" starttime="20210513 20:42:06.604" endtime="20210513 20:42:07.063"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:42:07.065" endtime="20210513 20:42:07.282"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:09.186" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:42:07.282" endtime="20210513 20:42:09.187"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:07.064" endtime="20210513 20:42:09.187"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:00.379" endtime="20210513 20:42:09.188" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TS_06-04 – Zmena poctu kusu">
+<kw name="Click On" library="keywords" type="setup">
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_TYPE_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:10.030" level="INFO">Element '//a[contains(text(),'SMT-Stencil')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:42:09.193" endtime="20210513 20:42:10.031"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:42:10.031" endtime="20210513 20:42:10.481"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:10.482" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'SMT-Stencil')]'.</msg>
+<status status="PASS" starttime="20210513 20:42:10.481" endtime="20210513 20:42:11.179"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:11.180" level="INFO">Clicking element '//a[contains(text(),'SMT-Stencil')]'.</msg>
+<status status="PASS" starttime="20210513 20:42:11.180" endtime="20210513 20:42:11.733"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:09.192" endtime="20210513 20:42:11.734"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_QTY_XPATH}</arg>
+<arg>\DELETE</arg>
+</arguments>
+<msg timestamp="20210513 20:42:11.736" level="INFO">Sending key(s) ('DELETE',) to //body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/input[1] element.</msg>
+<msg timestamp="20210513 20:42:12.485" level="INFO">Pressing special key DELETE to element.</msg>
+<msg timestamp="20210513 20:42:12.485" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20210513 20:42:11.735" endtime="20210513 20:42:12.740"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_QTY_XPATH}</arg>
+<arg>${TC_04_QTY}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:12.743" level="INFO">Typing text '5' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20210513 20:42:12.741" endtime="20210513 20:42:13.547"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210513 20:42:15.549" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210513 20:42:13.548" endtime="20210513 20:42:15.549"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_PRICE_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:16.003" level="INFO">Element '//strong[@class="ver ng-binding"]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:42:15.551" endtime="20210513 20:42:16.003"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:42:16.004" endtime="20210513 20:42:16.443"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:16.443" level="INFO">Simulating Mouse Over on element '//strong[@class="ver ng-binding"]'.</msg>
+<status status="PASS" starttime="20210513 20:42:16.443" endtime="20210513 20:42:17.134"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:17.135" level="INFO">Clicking element '//strong[@class="ver ng-binding"]'.</msg>
+<status status="PASS" starttime="20210513 20:42:17.135" endtime="20210513 20:42:17.655"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:15.550" endtime="20210513 20:42:17.656"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PRICE_XPATH}</arg>
+<arg>${TC_04_PRICE}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:18.136" level="INFO">Element '//strong[@class="ver ng-binding"]' contains text '$35.23'.</msg>
+<status status="PASS" starttime="20210513 20:42:17.657" endtime="20210513 20:42:18.137"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WEIGHT_XPATH}</arg>
+<arg>${TC_04_WEIGHT}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:18.621" level="INFO">Element '//div[@class="pt10"]/span[@class="pull-right ng-binding"]' contains text '4.50kg'.</msg>
+<status status="PASS" starttime="20210513 20:42:18.139" endtime="20210513 20:42:18.622"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:42:18.623" endtime="20210513 20:42:19.819"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:20.774" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:42:19.820" endtime="20210513 20:42:20.774"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:18.622" endtime="20210513 20:42:20.774"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:09.190" endtime="20210513 20:42:20.775" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TS_06-05 – Zadani zaporneho poctu kusu">
+<kw name="Click On" library="keywords" type="setup">
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_TYPE_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:21.244" level="INFO">Element '//a[contains(text(),'SMT-Stencil')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:42:20.777" endtime="20210513 20:42:21.244"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:42:21.245" endtime="20210513 20:42:21.700"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:21.700" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'SMT-Stencil')]'.</msg>
+<status status="PASS" starttime="20210513 20:42:21.700" endtime="20210513 20:42:22.398"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:22.400" level="INFO">Clicking element '//a[contains(text(),'SMT-Stencil')]'.</msg>
+<status status="PASS" starttime="20210513 20:42:22.399" endtime="20210513 20:42:22.979"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:20.776" endtime="20210513 20:42:22.980"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_QTY_XPATH}</arg>
+<arg>\DELETE</arg>
+</arguments>
+<msg timestamp="20210513 20:42:22.983" level="INFO">Sending key(s) ('DELETE',) to //body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/input[1] element.</msg>
+<msg timestamp="20210513 20:42:23.732" level="INFO">Pressing special key DELETE to element.</msg>
+<msg timestamp="20210513 20:42:23.732" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20210513 20:42:22.981" endtime="20210513 20:42:23.988"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_QTY_XPATH}</arg>
+<arg>${TC_05_QTY}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:23.989" level="INFO">Typing text '-2' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20210513 20:42:23.988" endtime="20210513 20:42:24.775"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210513 20:42:26.778" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210513 20:42:24.776" endtime="20210513 20:42:26.778"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_SMT_STENCIL_QTY_XPATH}</arg>
+<arg>${TC_05_QTY_EXPECTED}</arg>
+</arguments>
+<msg timestamp="20210513 20:42:27.633" level="INFO">Content of text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/input[1]' is '2'.</msg>
+<status status="PASS" starttime="20210513 20:42:26.779" endtime="20210513 20:42:27.634"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:20.775" endtime="20210513 20:42:27.635" critical="yes"></status>
+</test>
+<kw name="TS_06 Postcondition" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210513 20:42:27.639" endtime="20210513 20:42:27.910"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:42:27.639" endtime="20210513 20:42:27.911"></status>
+</kw>
+<doc>Tato sada overi zakladni funkcnost systemu pro vytvareni objednavky SMT-Stencil</doc>
+<metadata>
+<item name="Author">Martin Krcma</item>
+</metadata>
+<status status="PASS" starttime="20210513 20:41:53.687" endtime="20210513 20:42:27.911"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="TS 06">TS 06</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

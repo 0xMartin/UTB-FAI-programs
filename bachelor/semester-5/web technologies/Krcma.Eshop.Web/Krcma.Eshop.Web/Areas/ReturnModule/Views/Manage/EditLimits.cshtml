@@ -1,0 +1,50 @@
+﻿@model IList<Property>
+
+@{
+    ViewData["Title"] = "Edit limits";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<h1>Edit limits</h1>
+
+<a asp-action="Index">Go back</a>
+<br>
+
+@{
+    if (Model != null)
+    {
+        <form asp-action="EditLimits" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        for (int i = 0; i < Model.Count; ++i)
+                        {
+                            <tr>
+                                <td><input asp-for="@Model[i].Name" type="text" class="form-control" readonly="readonly"></td>
+                                <td><input asp-for="@Model[i].Value" type="number" class="form-control"></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary">Apply</button>
+        </form>
+    }
+}
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/FileContentTypeValidation.js"></script>
+}

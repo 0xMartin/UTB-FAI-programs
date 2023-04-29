@@ -1,0 +1,45 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Set shipping time";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<h1>Set shipping delay</h1>
+
+<a asp-action="ShippingDelay">Go back</a>
+<br>
+
+@{
+    if (Model != null)
+    {
+        <p><b>Order number:</b> @Model.OrderNumber</p>
+
+        <form asp-action="SetShippingDelay" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="@Model.ID" type="hidden">
+            <input asp-for="@Model.OrderNumber" type="hidden">
+            <input asp-for="@Model.TotalPrice" type="hidden">
+            <input asp-for="@Model.UserId" type="hidden">
+
+            <div class="input-group">
+                <input asp-for="@Model.ShippingDelay" type="number" min="0">
+                <div class="input-group-append">
+                    <span class="input-group-text"> days </span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">
+                Apply
+            </button>
+        </form>
+    }
+}
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/FileContentTypeValidation.js"></script>
+}

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on linux)" generated="20210513 20:39:10.188" rpa="false">
+<suite id="s1" name="TS 04" source="/home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/TS_04/TS_04.robot">
+<kw name="TS_01 Precondition" type="setup">
+<kw name="Open Browser With URL" library="keywords">
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>${PAGE_HOME_URL}</arg>
+<arg>${PAGE_HOME_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:10.351" level="INFO">Opening browser 'Chrome' to base url 'https://jlcpcb.com/'.</msg>
+<status status="PASS" starttime="20210513 20:39:10.351" endtime="20210513 20:39:14.113"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:14.113" endtime="20210513 20:39:14.166"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:10.350" endtime="20210513 20:39:14.166"></status>
+</kw>
+<kw name="Init Tests" library="settings">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210513 20:39:14.167" endtime="20210513 20:39:14.271"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELENIUM_SPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:14.271" endtime="20210513 20:39:14.272"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${SCREENSHOT_DIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:14.272" endtime="20210513 20:39:14.272"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:14.167" endtime="20210513 20:39:14.272"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:10.350" endtime="20210513 20:39:14.272"></status>
+</kw>
+<test id="s1-t1" name="TS_04-01 – Zobrazeni navigace">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:14.273" endtime="20210513 20:39:15.028"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:15.525" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:15.030" endtime="20210513 20:39:15.526"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="teardown">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_04-01${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:16.036" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_04-01-screenshot.png"&gt;&lt;img src="../screenshots/TS_04-01-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:15.527" endtime="20210513 20:39:16.037"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:14.272" endtime="20210513 20:39:16.038" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TS_04-02 – Zobrazeni panelu pro vyber objednavky">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_INSTANT_QUOTE_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:16.043" endtime="20210513 20:39:16.765"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_INSTANT_QUOTE_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:17.245" level="INFO">Element '//body/div[@id='bannerbox']/div[3]/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:16.766" endtime="20210513 20:39:17.245"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:16.040" endtime="20210513 20:39:17.246" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TS_04-03 – Zobrazeni nabidky sluzeb">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_OFFERED_SERVICES_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:17.247" endtime="20210513 20:39:17.958"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_OFFERED_SERVICES_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:18.430" level="INFO">Element '//div[contains(@class, "homecont-01")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:17.959" endtime="20210513 20:39:18.430"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="teardown">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_04-03${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:19.014" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_04-03-screenshot.png"&gt;&lt;img src="../screenshots/TS_04-03-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:18.431" endtime="20210513 20:39:19.014"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:17.247" endtime="20210513 20:39:19.015" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TS_04-04 – Zobrazeni prezentacniho videa">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_VIDEO_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:19.019" endtime="20210513 20:39:19.758"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_VIDEO_XPATH}</arg>
+<arg>${PAGE_HOME_VIDEO_IFRAME_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:20.199" level="INFO">Element '//div[contains(@class, "pcbMediaBg")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:19.760" endtime="20210513 20:39:20.200"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:20.200" endtime="20210513 20:39:20.640"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:20.641" level="INFO">Simulating Mouse Over on element '//div[contains(@class, "pcbMediaBg")]'.</msg>
+<status status="PASS" starttime="20210513 20:39:20.640" endtime="20210513 20:39:21.329"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:21.330" level="INFO">Clicking element '//div[contains(@class, "pcbMediaBg")]'.</msg>
+<status status="PASS" starttime="20210513 20:39:21.329" endtime="20210513 20:39:21.842"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:21.843" endtime="20210513 20:39:22.312"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:19.759" endtime="20210513 20:39:22.312"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_VIDEO_IFRAME_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:22.739" level="INFO">Element '//iframe[@id='video2']' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:22.312" endtime="20210513 20:39:22.739"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:22.739" endtime="20210513 20:39:23.182"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:23.184" level="INFO">Simulating Mouse Over on element '//iframe[@id='video2']'.</msg>
+<status status="PASS" starttime="20210513 20:39:23.183" endtime="20210513 20:39:23.931"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:23.932" level="INFO">Clicking element '//iframe[@id='video2']'.</msg>
+<status status="PASS" starttime="20210513 20:39:23.931" endtime="20210513 20:39:24.471"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:22.312" endtime="20210513 20:39:24.471"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_04-04${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Click On</arg>
+<arg>${PAGE_HOME_VIDEO_CLOSE_BTN_XPATH}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_04-04${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:25.322" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_04-04-screenshot.png"&gt;&lt;img src="../screenshots/TS_04-04-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:24.472" endtime="20210513 20:39:25.322"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_VIDEO_CLOSE_BTN_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:25.767" level="INFO">Element '//body/div[@id='videoModal1']/a[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:25.323" endtime="20210513 20:39:25.767"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:25.767" endtime="20210513 20:39:26.209"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:26.210" level="INFO">Simulating Mouse Over on element '//body/div[@id='videoModal1']/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:26.209" endtime="20210513 20:39:26.899"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:26.900" level="INFO">Clicking element '//body/div[@id='videoModal1']/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:26.900" endtime="20210513 20:39:27.478"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:25.322" endtime="20210513 20:39:27.479"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:24.472" endtime="20210513 20:39:27.480"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:19.017" endtime="20210513 20:39:27.480" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TS_04-05 – Zobrazeni videi vyrobniho procesu">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_MANUFACTURING_CONATINER_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:27.488" endtime="20210513 20:39:28.351"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_MANUFACTURING_FIRST_VIDEO_XPATH}</arg>
+<arg>${PAGE_HOME_MANUFACTURING_VIDEO_IFRAME_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:28.805" level="INFO">Element '//body/div[4]/div[4]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:28.352" endtime="20210513 20:39:28.806"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:28.807" endtime="20210513 20:39:29.267"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:29.269" level="INFO">Simulating Mouse Over on element '//body/div[4]/div[4]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:29.268" endtime="20210513 20:39:29.975"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:29.976" level="INFO">Clicking element '//body/div[4]/div[4]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:29.975" endtime="20210513 20:39:30.547"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:30.547" endtime="20210513 20:39:31.002"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:28.351" endtime="20210513 20:39:31.003"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_MANUFACTURING_VIDEO_IFRAME_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:31.521" level="INFO">Element '//iframe[@id='video1']' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:31.004" endtime="20210513 20:39:31.521"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_04-05${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Click On</arg>
+<arg>${PAGE_HOME_MANUFACTURING_VIDEO_CLOSE_BTN_XPATH}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_04-05${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:32.651" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_04-05-screenshot.png"&gt;&lt;img src="../screenshots/TS_04-05-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:31.523" endtime="20210513 20:39:32.652"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_MANUFACTURING_VIDEO_CLOSE_BTN_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:33.091" level="INFO">Element '//body/div[@id='videoModal']/a[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:32.652" endtime="20210513 20:39:33.091"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:33.092" endtime="20210513 20:39:33.538"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:33.539" level="INFO">Simulating Mouse Over on element '//body/div[@id='videoModal']/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:33.538" endtime="20210513 20:39:34.230"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:34.230" level="INFO">Clicking element '//body/div[@id='videoModal']/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:34.230" endtime="20210513 20:39:34.746"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:32.652" endtime="20210513 20:39:34.747"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:31.522" endtime="20210513 20:39:34.747"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:27.483" endtime="20210513 20:39:34.747" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TS_04-07 – Zobrazeni footeru stranky">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_FOOTER_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:34.752" endtime="20210513 20:39:35.525"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_FOOTER_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:36.077" level="INFO">Element '//div[contains(@class, 'newFooter')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:35.526" endtime="20210513 20:39:36.077"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="teardown">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_04-07${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:36.599" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_04-07-screenshot.png"&gt;&lt;img src="../screenshots/TS_04-07-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:36.078" endtime="20210513 20:39:36.599"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:34.749" endtime="20210513 20:39:36.599" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TS_04-08 – Zobrazeni navodneho videa">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_HOME_TUTORIAL_VIDEO_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:36.601" endtime="20210513 20:39:37.308"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_TUTORIAL_VIDEO_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:37.753" level="INFO">Element '//video[@id='video']' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:37.309" endtime="20210513 20:39:37.753"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="teardown">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_04-09${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:38.217" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_04-09-screenshot.png"&gt;&lt;img src="../screenshots/TS_04-09-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:37.754" endtime="20210513 20:39:38.217"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:36.600" endtime="20210513 20:39:38.217" critical="yes"></status>
+</test>
+<kw name="TS_01 Postcondition" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210513 20:39:38.220" endtime="20210513 20:39:38.488"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:38.219" endtime="20210513 20:39:38.488"></status>
+</kw>
+<doc>Testovaci sada pro overeni spravneho zobrazovani UI domovske stranky</doc>
+<metadata>
+<item name="Author">Martin Krcma</item>
+</metadata>
+<status status="PASS" starttime="20210513 20:39:10.189" endtime="20210513 20:39:38.488"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="TS 04">TS 04</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

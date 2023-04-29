@@ -1,0 +1,51 @@
+﻿@model IList<Order>
+@{
+    ViewData["Title"] = "Shipping time";
+}
+
+@section Styles
+    {
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<h1>Shipping time</h1>
+
+<a asp-action="Index">Go back</a>
+<br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Number
+            </th>
+            <th>
+                Date Time Created
+            </th>
+            <th>
+                Shipping Delay [days]
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTimeCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippingDelay)
+            </td>
+            <td>
+                <a asp-action="SetShippingDelay" asp-route-id="@item.ID">Set shipping delay</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

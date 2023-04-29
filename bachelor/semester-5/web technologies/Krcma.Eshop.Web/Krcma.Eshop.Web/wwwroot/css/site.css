@@ -1,0 +1,154 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*
+body {
+    margin-bottom: 60px;
+}
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/img/bg.jpg");
+    /* Set a specific height */
+    min-height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.noparallax {
+    min-height: 85vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dropdown-menu-dark {
+    color: #dee2e6;
+    background-color: #343a40;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+    .dropdown-menu-dark .dropdown-item {
+        color: #dee2e6;
+    }
+
+        .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
+            color: #fff;
+            background-color: #0d6efd;
+        }
+
+        .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
+            color: #adb5bd;
+        }
+
+    .dropdown-menu-dark .dropdown-divider {
+        border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .dropdown-menu-dark .dropdown-item-text {
+        color: #dee2e6;
+    }
+
+    .dropdown-menu-dark .dropdown-header {
+        color: #adb5bd;
+    }
+
+
+#particles-js {
+    top: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+ul.navbar-nav > .nav-item > a.nav-link.active {
+    background: #080808;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+ul.navbar-nav > .nav-item > a.nav-link.dropdown-toggle.active {
+    pointer-events: all;
+}
+
+ul.navbar-nav > .nav-item > a.nav-link {
+    padding: 1.7vh 0.8vw;
+}

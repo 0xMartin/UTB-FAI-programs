@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EffectiveCodes:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/EffectiveCodes_jar</output-path>
+    <root id="archive" name="EffectiveCodes.jar">
+      <element id="module-output" name="EffectiveCodes" />
+    </root>
+  </artifact>
+</component>

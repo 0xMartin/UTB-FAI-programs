@@ -1,0 +1,42 @@
+﻿@model Product
+
+@{
+    if (ViewBag.Action != null)
+    {
+    <form asp-action="@ViewBag.Action" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        @{
+            if (ViewBag.Action == nameof(ProductController.Edit))
+            {
+                <input asp-for="ID" type="hidden">
+            }
+        }
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" type="text" class="form-control" placeholder="Enter name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price">Price</label>
+            <input asp-for="Price" type="text" class="form-control" placeholder="Enter price">
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <textarea asp-for="Description" type="text" class="form-control" placeholder="Enter Description" rows="4" cols="50"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DigitalProduct">Digital Product</label>
+            @Html.EditorFor(modelItem => Model.DigitalProduct)
+            <span asp-validation-for="DigitalProduct" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Image">Image</label>
+            <input id=fileupload asp-for="Image" class="form-control-file">
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    }
+}

@@ -1,0 +1,3 @@
+obrazek c. 1 -> spusteni programu s predefinovanymi parametry (url: https://openai.com/, depth: 2)
+obrazek c. 2 -> vystup programu: top 30 stranek s nejvyssim rankem
+export.csv -> vystup programu (ranky stranek) vyexportovany do csv souboru

@@ -1,0 +1,53 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Select Product";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<a asp-action="Create">Create new item</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">ImageSource</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Digital</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            if (Model != null && Model.Products != null)
+            {
+                for (int i = 0; i < Model.Products.Count; ++i)
+                {
+                <tr>
+                    <td>@Model.Products[i].ID</td>
+                    <td>@Model.Products[i].Name</td>
+                    <td>@Model.Products[i].ImageSource</td>
+                    <td>@Model.Products[i].Description</td>
+                    <td>@Model.Products[i].Price</td>
+                    <td>@Model.Products[i].DigitalProduct</td>
+                    <td><a asp-action="Edit" asp-route-ID="@Model.Products[i].ID">Edit</a></td>
+                    <td><a asp-action="Delete" asp-route-ID="@Model.Products[i].ID" onclick="return ConfirmDelete();">Delete</a></td>
+                </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script src="~/js/alerts.js"></script>
+}

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/meteor.png</file>
+        <file>img/ufo.png</file>
+    </qresource>
+</RCC>

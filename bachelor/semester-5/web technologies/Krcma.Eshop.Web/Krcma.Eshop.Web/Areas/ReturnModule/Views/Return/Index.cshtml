@@ -1,0 +1,136 @@
+﻿@model ReturnViewModel
+
+@{
+    ViewData["Title"] = "Return product";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<div class="px-5 pt-4">
+    <h1>Return product</h1>
+
+    <div class="card p-2">
+        @{
+            if (Model != null && Model != null && Model.UserOrders.Count > 0)
+            {
+
+                int itemsOnPage = 0;
+                int itemStartIndex = (Model.CurrentPageNumber - 1) * Model.ItemsOnPage;
+
+
+                <table class="table table-responsive table-striped w-100" style="border-collapse: separate; border-spacing: 0 10px;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="col-sm-8 p-3">Info</th>
+                            <th class="col-sm-4 p-3">Image</th>
+                        </tr>
+                    </thead>
+                    @{
+                        foreach (var item in Model.UserOrders)
+                        {
+                            if ((itemsOnPage - itemStartIndex) > Model.ItemsOnPage) break;
+
+                            foreach (var itemOrderItem in item.OrderItems)
+                            {
+                                itemsOnPage++;
+                                if ((itemsOnPage - itemStartIndex) > Model.ItemsOnPage) break;
+                                if (itemsOnPage <= itemStartIndex) continue;
+
+                                <tr>
+                                    <td class="col-sm-8 p-0">
+                                        <table class="table w-100">
+                                            <tr>
+                                                <th>Product &#128230;</th>
+                                                <td>
+                                                    <a asp-area="" asp-controller="Product" asp-action="Detail" asp-route-ID="@itemOrderItem.Product.ID">@itemOrderItem.Product.Name</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Price &#128178;</th>
+                                                <td>@itemOrderItem.Price.ToString("C2")</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Amount &#x1F522;</th>
+                                                <td>@itemOrderItem.Amount</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Date Time Created &#128197;</th>
+                                                <td>@item.DateTimeCreated</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Order Number &#128230;</th>
+                                                <td>@item.OrderNumber</td>
+                                            </tr>
+                                        </table>
+
+                                        <div class="px-4 py-2">
+                                            @**info o aktualnim stavu pozadavku na vraceni zbozi / tlacitko na pozadavek*@
+                                            @{
+                                                ReturnProduct rp = Model.ReturnProducts.FirstOrDefault(rp => rp.OrderItemID == itemOrderItem.ID);
+                                                if (rp != null)
+                                                {
+                                                    if (rp.Processed)
+                                                    {
+                                                        if (rp.Approved)
+                                                        {
+                                                            <p class="text-success"><b>Return request approved</b></p>
+                                                        }
+                                                        else
+                                                        {
+                                                            <p class="text-danger"><b>Return request denied</b></p>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <p class="text-info"><b>Request sent, waiting for approval</b></p>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <a type="button" class="btn btn-danger" asp-area="ReturnModule" asp-controller="Return" asp-action="RequestProductReturn" asp-route-orderItemID="@itemOrderItem.ID" onclick="return ConfirmReturn();">Return Product</a>
+                                                }
+                                            }
+                                        </div>
+
+                                    </td>
+                                    <td class="col-sm-4"><img class="card-img-top p-2" src="@itemOrderItem.Product.ImageSource" /></td>
+                                </tr>
+                            }
+                        }
+                    }
+                </table>
+
+
+                <div class="d-flex justify-content-center">
+                    @{
+                        for (int i = Math.Max(Model.CurrentPageNumber - 3, 1), cnt = 0; i <= Model.TotalPageCount && cnt <= 7; ++i, ++cnt)
+                        {
+                            if (i == Model.CurrentPageNumber)
+                            {
+                                <a class="badge badge-dark p-3 m-1" asp-area="ReturnModule" asp-controller="Return" asp-action="Index" asp-route-PAGE="@i">@i</a>
+                            }
+                            else
+                            {
+                                <a class="badge badge-secondary p-3 m-1" asp-area="ReturnModule" asp-controller="Return" asp-action="Index" asp-route-PAGE="@i">@i</a>
+                            }
+                        }
+                    }
+                </div>
+            }
+            else
+            {
+                <h2>Orders are empty!</h2>
+            }
+        }
+
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/returnModule.js"></script>
+}
+

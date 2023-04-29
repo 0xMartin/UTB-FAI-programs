@@ -1,0 +1,179 @@
+{
+    "default": {
+        "fill_color": "251, 251, 251"
+    },
+    "Button": {
+        "outline_color": "180, 180, 180",
+        "foreground_color": "70, 70, 70",
+        "background_color": "200, 200, 200",
+        "font_name": "Verdena",
+        "font_size": 32,
+        "font_bold": "False"
+    },
+    "Canvas": {
+        "outline_color": "190, 190, 190",
+        "foreground_color": "210, 210, 210",
+        "background_color": "255, 255, 255",
+        "font_name": "Consolas",
+        "font_size": 18,
+        "font_bold": "False"
+    },
+    "CheckBox": {
+        "outline_color": "200, 200, 200",
+        "foreground_color": "127, 103, 221",
+        "background_color": "230, 230, 230",
+        "size": 20,
+        "label": {
+            "foreground_color": "100, 100, 100",
+            "font_name": "Verdena",
+            "font_size": 28,
+            "font_bold": "False"
+        }
+    },
+    "Graph": {
+        "theme": "light"
+    },
+    "Image": {
+        "foreground_color": "255, 255, 255",
+        "background_color": "50, 50, 50",
+        "font_name": "Verdena",
+        "font_size": 32,
+        "font_bold": "False"
+    },
+    "Label": {
+        "foreground_color": "44, 44, 44",
+        "font_name": "Verdena",
+        "font_size": 32,
+        "font_bold": "False"
+    },
+    "RadioButton": {
+        "outline_color": "200, 200, 200",
+        "foreground_color": "127, 103, 221",
+        "background_color": "230, 230, 230",
+        "size": 20,
+        "label": {
+            "foreground_color": "80, 80, 80",
+            "font_name": "Verdena",
+            "font_size": 28,
+            "font_bold": "False"
+        }
+    },
+    "Slider": {
+        "outline_color": "200, 200, 200",
+        "foreground_color": "127, 103, 221",
+        "background_color": "230, 230, 230",
+        "label": {
+            "foreground_color": "120, 120, 120",
+            "font_name": "Verdena",
+            "font_size": 22,
+            "font_bold": "False"
+        }
+    },
+    "Table": {
+        "header": {
+            "foreground_color": "35, 35, 35",
+            "background_color": "195, 195, 195",
+            "font_name": "Verdena",
+            "font_size": 26,
+            "font_bold": "False"
+        },
+        "body": {
+            "foreground_color": "90, 90, 90",
+            "background_color": "240, 240, 240",
+            "font_name": "Helvetica",
+            "font_size": 14,
+            "font_bold": "False",
+            "scrollbar_width": 16
+        },
+        "scrollbar": {
+            "outline_color": "195, 195, 195",
+            "background_color": "220, 220, 220",
+            "foreground_color": "170, 170, 170"
+        }
+    },
+    "TextInput": {
+        "outline_color": "190, 190, 190",
+        "foreground_color": "30, 30, 30",
+        "background_color": "245, 245, 245",
+        "font_name": "Helvetica",
+        "font_size": 18,
+        "font_bold": "False"
+    },
+    "VerticalScrollbar": {
+        "outline_color": "195, 195, 195",
+        "background_color": "220, 220, 220",
+        "foreground_color": "170, 170, 170"
+    },
+    "HorizontalScrollbar": {
+        "outline_color": "195, 195, 195",
+        "background_color": "220, 220, 220",
+        "foreground_color": "170, 170, 170"
+    },
+    "Panel": {
+        "outline_color": "190, 190, 190",
+        "background_color": "247, 247, 247"
+    },
+    "ToggleButton": {
+        "outline_color": "200, 200, 200",
+        "foreground_color": "127, 103, 221",
+        "background_color": "230, 230, 230",
+        "label": {
+            "foreground_color": "80, 80, 80",
+            "font_name": "Verdena",
+            "font_size": 28,
+            "font_bold": "False"
+        }
+    },
+    "TabPanel": {
+        "outline_color": "200, 200, 200",
+        "background_color": "247, 247, 247",
+        "foreground_color": "80, 80, 80",
+        "font_name": "Verdena",
+        "font_size": 22,
+        "font_bold": "False"
+    },
+    "ComboBox": {
+        "outline_color": "180, 180, 180",
+        "foreground_color": "70, 70, 70",
+        "background_color": "200, 200, 200",
+        "font_name": "Verdena",
+        "font_size": 26,
+        "font_bold": "False",
+        "button": {
+            "outline_color": "180, 180, 180",
+            "foreground_color": "70, 70, 70",
+            "background_color": "200, 200, 200",
+            "font_name": "Arial",
+            "font_size": 18,
+            "font_bold": "False"
+        },
+        "listpanel": {
+            "outline_color": "190, 190, 190",
+            "foreground_color": "70, 70, 70",
+            "background_color": "247, 247, 247",
+            "scrollbar_width": 16,
+            "font_name": "Verdena",
+            "font_size": 26,
+            "font_bold": "False",
+            "scrollbar": {
+                "outline_color": "195, 195, 195",
+                "background_color": "220, 220, 220",
+                "foreground_color": "170, 170, 170"
+            }
+        }
+    },
+    "ListPanel": {
+        "outline_color": "190, 190, 190",
+        "foreground_color": "70, 70, 70",
+        "background_color": "247, 247, 247",
+        "scrollbar_width": 16,
+        "font_name": "Verdena",
+        "font_size": 26,
+        "font_bold": "False",
+        "scrollbar": {
+            "outline_color": "195, 195, 195",
+            "background_color": "220, 220, 220",
+            "foreground_color": "170, 170, 170"
+        }
+    }
+}

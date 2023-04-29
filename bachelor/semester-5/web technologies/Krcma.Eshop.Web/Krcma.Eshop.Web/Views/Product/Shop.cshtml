@@ -1,0 +1,96 @@
+﻿@model ProductsViewModel
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/shopitem-styles.css">
+}
+
+<div class="d-flex flex-column px-5 pt-4">
+    <h1 class="mb-3">Shop &#128722;</h1>
+    <div class="card">
+        <div class="d-flex justify-content-between p-3 ">
+            @{
+                <span>
+                    <b>Strana:</b>
+                    <div class="badge badge-danger">
+                        <span>@Model.CurrentPageNumber</span>
+                    </div>
+                </span>
+                int on_page = Math.Min(Model.Products.Count - (Model.CurrentPageNumber - 1) * Model.ItemsOnPage, Model.ItemsOnPage);
+                <span>
+                    <b>Produktů na stránce:</b>
+                    <div class="badge badge-danger">
+                        <span>@on_page</span>
+                    </div>
+                </span>
+                <span>
+                    <b>Produktů na našém E-SHOPu:</b>
+                    <div class="badge badge-danger">
+                        <span>@Model.Products.Count</span>
+                    </div>
+                </span>
+            }
+        </div>
+    </div>
+</div>
+
+<section class="py-1">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            @{
+                int offset = (Model.CurrentPageNumber - 1) * Model.ItemsOnPage;
+                if (offset < 0) offset = 0;
+
+                for (int i = offset; i < Model.Products.Count && i < Model.ItemsOnPage + offset; ++i)
+                {
+                    <input asp-for="@Model.Products[i].ID" type="hidden">
+                    <div class="col-4 mb-5">
+                        <div class="card h-100">
+
+                            <div class="d-flex align-items-center h-100">
+                                <div class="d-flex align-items-start flex-column">
+                                    <!-- Product image-->
+                                    <img class="card-img-top p-2" src="@Model.Products[i].ImageSource" />
+                                    <!-- Product details-->
+                                    <div class="card-body p-4 w-100">
+                                        <div class="text-center">
+                                            <!-- Product name-->
+                                            <h5 class="fw-bolder">@Model.Products[i].Name</h5>
+                                            <!-- Product price-->
+                                            @Model.Products[i].Price ,-
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-controller="Product" asp-action="Detail" asp-route-ID="@Model.Products[i].ID">Detail</a></div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<div class="d-flex justify-content-center">
+    @{
+        for (int i = Math.Max(Model.CurrentPageNumber - 3, 1), cnt = 0; i <= Model.TotalPageCount && cnt <= 7; ++i, ++cnt){
+            if (i == Model.CurrentPageNumber)
+            {
+                <a class="badge badge-dark p-3 m-1" asp-area="" asp-controller="Product" asp-action="Shop" asp-route-PAGE="@i">@i</a>
+            }
+            else
+            {
+                <a class="badge badge-secondary p-3 m-1" asp-area="" asp-controller="Product" asp-action="Shop" asp-route-PAGE="@i">@i</a>
+            }
+        }
+    }
+</div>

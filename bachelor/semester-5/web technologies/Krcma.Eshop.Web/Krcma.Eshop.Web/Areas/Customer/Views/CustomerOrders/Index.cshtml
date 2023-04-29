@@ -1,0 +1,80 @@
+﻿@model IList<Order>
+
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<div class="px-5 pt-4">
+    <h2>My Orders &#128722;</h2>
+    <h3>@ViewData["Message"]</h3>
+    <br />
+
+    @{
+        if (Model != null && Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+
+                <div class="card p-2">
+                    <table style="width:100%" class="table table-responsive table-striped table-bordered">
+                        <tr>
+                            <th class="col-sm-1">ID &#127380;</th>
+                            <th class="col-sm-2">Order Number &#128230;</th>
+                            <th class="col-sm-3">Total Price &#128178;</th>
+                            <th class="col-sm-3">Date Time Created &#128197;</th>
+                            <th class="col-sm-3">Username &#128100;</th>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-1">@item.ID</td>
+                            <td class="col-sm-2">@item.OrderNumber</td>
+                            <td class="col-sm-3">@item.TotalPrice.ToString("C2")</td>
+                            <td class="col-sm-3">@item.DateTimeCreated</td>
+                            <td class="col-sm-3">@item.User.UserName</td>
+                        </tr>
+
+
+                    </table>
+
+                    <details>
+                        <summary>Details</summary>
+                        <div id="order_items_@item.ID">
+                            <h4>Order Items</h4>
+                            <table class="table table-responsive table-bordered w-75">
+                                <tr>
+                                    <th class="col-sm-3">@nameof(Product.Name) &#128230;</th>
+                                    <th class="col-sm-3">Image &#128444;</th>
+                                    <th class="col-sm-3">@nameof(OrderItem.Amount) &#x1F522;</th>
+                                    <th class="col-sm-3">@nameof(OrderItem.Price) &#128178;</th>
+                                </tr>
+
+                                @{
+                                    foreach (var itemOrderItems in item.OrderItems)
+                                    {
+                                        <tr>
+                                            <td class="col-sm-3">
+                                                <a asp-area="" asp-controller="Product" asp-action="Detail" asp-route-ID="@itemOrderItems.Product.ID">@itemOrderItems.Product.Name</a>
+                                            </td>
+                                            <td class="col-sm-3"><img class="card-img-top p-2" src="@itemOrderItems.Product.ImageSource" /></td>
+                                            <td class="col-sm-3">@itemOrderItems.Amount</td>
+                                            <td class="col-sm-3">@itemOrderItems.Price.ToString("C2")</td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            }
+
+        }
+        else
+        {
+            <h2>Orders are empty!</h2>
+        }
+    }
+</div>

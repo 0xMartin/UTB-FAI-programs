@@ -1,0 +1,47 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Select Carousel item";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<a asp-action="Create">Create new item</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image src</th>
+            <th scope="col">Image alt</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            if (Model != null && Model.CarouselItems != null)
+            {
+                for (int i = 0; i < Model.CarouselItems.Count; ++i)
+                {
+                    <tr>
+                        <td>@Model.CarouselItems[i].ID</td>
+                        <td>@Model.CarouselItems[i].ImageSource</td>
+                        <td>@Model.CarouselItems[i].ImageAlt</td>
+                        <td><a asp-action="Edit" asp-route-ID="@Model.CarouselItems[i].ID">Edit</a></td>
+                        <td><a asp-action="Delete" asp-route-ID="@Model.CarouselItems[i].ID" onclick="return ConfirmDelete();">Delete</a></td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script src="~/js/alerts.js"></script>
+}

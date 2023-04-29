@@ -1,0 +1,27 @@
+﻿@model CarouselItem
+
+@{
+    if (ViewBag.Action != null)
+    {
+    <form asp-action="@ViewBag.Action" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        @{ 
+            if(ViewBag.Action == nameof(CarouselController.Edit))
+            {
+               <input asp-for="ID" type="hidden">
+            }
+        } 
+        <div class="form-group">
+            <label asp-for="Image">Image</label>
+            <input id=fileupload asp-for="Image" class="form-control-file">
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ImageAlt">Image alt</label>
+            <input asp-for="ImageAlt" type="text" class="form-control" placeholder="Enter image alt">
+            <span asp-validation-for="ImageAlt" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    }
+}

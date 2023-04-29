@@ -1,0 +1,61 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<div class="px-5 pt-4">
+    <h1>Detail &#128269;</h1>
+
+    <!-- Product section-->
+    @{
+        if (Model != null)
+        {
+            double price = Math.Round(Model.Price * 1.2);
+            <section class="py-5">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="@Model.ImageSource" alt="..." /></div>
+                        <div class="col-md-6">
+                            <h1 class="display-5 fw-bolder">@Model.Name</h1>
+                            <div class="fs-5 mb-5">
+                                <span class="text-decoration-line-through">@price,-</span>
+                                <span>@Model.Price,-</span>
+                            </div>
+                            <p class="lead">@Model.Description</p>
+                            <div class="d-flex">
+                                <div class="px-1">
+                                    <button class="btn btn-outline-dark flex-shrink-0" type="button"
+                                            onclick="Buy(@Model.ID,'@Url.Action("AddOrderItemsToSession", "CustomerOrderNotCart", new { Area = "Customer" })', '#total_price', '@System.Globalization.CultureInfo.CurrentCulture.Name')">
+                                        <i class="bi-cart-fill me-1"></i>
+                                        Add to cart
+                                    </button>
+                                </div>
+                                <div class="px-1">
+                                    <a class="btn btn-outline-dark flex-shrink-0" type="button" href="javascript:void(0);" onclick="history.go(-1);">
+                                        Back
+                                    </a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+    }
+</div>
+
+@section Scripts
+{
+    <environment include="Development">
+        <script src="~/js/Product.js"></script>
+    </environment>
+    <environment include="Development">
+        <script src="~/js/Product.min.js"></script>
+    </environment>
+}

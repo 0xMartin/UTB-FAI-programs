@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on linux)" generated="20210513 20:39:38.727" rpa="false">
+<suite id="s1" name="TS 05" source="/home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/TS_05/TS_05.robot">
+<kw name="TS_05 Precondition" type="setup">
+<kw name="Open Browser With URL" library="keywords">
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>${PAGE_ORDER_URL}</arg>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:38.907" level="INFO">Opening browser 'Chrome' to base url 'https://cart.jlcpcb.com'.</msg>
+<status status="PASS" starttime="20210513 20:39:38.907" endtime="20210513 20:39:42.464"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:42.465" endtime="20210513 20:39:42.520"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:38.906" endtime="20210513 20:39:42.521"></status>
+</kw>
+<kw name="Init Tests" library="settings">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210513 20:39:42.521" endtime="20210513 20:39:43.105"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELENIUM_SPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:43.105" endtime="20210513 20:39:43.105"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${SCREENSHOT_DIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:43.106" endtime="20210513 20:39:43.106"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:42.521" endtime="20210513 20:39:43.106"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:38.906" endtime="20210513 20:39:43.107"></status>
+</kw>
+<test id="s1-t1" name="TS_05-01 – Upload souboru s navrhem PCB">
+<kw name="File Check" type="setup">
+<arguments>
+<arg>${VALID_PCB}</arg>
+</arguments>
+<kw name="File Exists" library="file">
+<arguments>
+<arg>${file}</arg>
+</arguments>
+<assign>
+<var>${fileExists}</var>
+</assign>
+<msg timestamp="20210513 20:39:43.110" level="INFO">${fileExists} = True</msg>
+<status status="PASS" starttime="20210513 20:39:43.109" endtime="20210513 20:39:43.110"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${fileExists}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:43.110" endtime="20210513 20:39:43.110"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:43.108" endtime="20210513 20:39:43.111"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>${VALID_PCB}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:43.112" endtime="20210513 20:39:43.478"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:43.478" endtime="20210513 20:39:44.366"></status>
+</kw>
+<kw name="File Absolute Path" library="file">
+<arguments>
+<arg>${file}</arg>
+</arguments>
+<assign>
+<var>${fileAbsolute}</var>
+</assign>
+<msg timestamp="20210513 20:39:44.368" level="INFO">${fileAbsolute} = /home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/resources/valid_pcb.zip</msg>
+<status status="PASS" starttime="20210513 20:39:44.367" endtime="20210513 20:39:44.368"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+<arg>${fileAbsolute}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:44.370" level="INFO">Sending /home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/resources/valid_pcb.zip to browser.</msg>
+<status status="PASS" starttime="20210513 20:39:44.369" endtime="20210513 20:39:44.876"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:43.111" endtime="20210513 20:39:44.876"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PCB_DESIGN_VIEW_XPATH}</arg>
+<arg>100s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:44.876" endtime="20210513 20:40:18.619"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${PAGE_ORDER_HEIGHT_XPATH}</arg>
+<arg>value</arg>
+<arg>${TC_01_HEIGHT}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:19.067" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[1]' attribute 'value' contains value '72'.</msg>
+<status status="PASS" starttime="20210513 20:40:18.620" endtime="20210513 20:40:19.067"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WIDTH_XPATH}</arg>
+<arg>value</arg>
+<arg>${TC_01_WIDTH}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:19.509" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[2]' attribute 'value' contains value '100'.</msg>
+<status status="PASS" starttime="20210513 20:40:19.068" endtime="20210513 20:40:19.509"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_05-01${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Reload Page And Wait</arg>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_05-01${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:19.921" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_05-01-screenshot.png"&gt;&lt;img src="../screenshots/TS_05-01-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:40:19.511" endtime="20210513 20:40:19.921"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:19.923" endtime="20210513 20:40:20.137"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:21.959" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:20.137" endtime="20210513 20:40:21.959"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:19.922" endtime="20210513 20:40:21.960"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:19.510" endtime="20210513 20:40:21.960"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:43.107" endtime="20210513 20:40:21.960" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TS_05-02 – Upload souboru s neplatnym formatem">
+<kw name="File Check" type="setup">
+<arguments>
+<arg>${INVALID_PCB}</arg>
+</arguments>
+<kw name="File Exists" library="file">
+<arguments>
+<arg>${file}</arg>
+</arguments>
+<assign>
+<var>${fileExists}</var>
+</assign>
+<msg timestamp="20210513 20:40:21.964" level="INFO">${fileExists} = True</msg>
+<status status="PASS" starttime="20210513 20:40:21.963" endtime="20210513 20:40:21.964"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${fileExists}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:21.965" endtime="20210513 20:40:21.965"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:21.962" endtime="20210513 20:40:21.966"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>${INVALID_PCB}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:21.967" endtime="20210513 20:40:22.211"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:22.211" endtime="20210513 20:40:23.113"></status>
+</kw>
+<kw name="File Absolute Path" library="file">
+<arguments>
+<arg>${file}</arg>
+</arguments>
+<assign>
+<var>${fileAbsolute}</var>
+</assign>
+<msg timestamp="20210513 20:40:23.115" level="INFO">${fileAbsolute} = /home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/resources/invalid_format_pcb.data</msg>
+<status status="PASS" starttime="20210513 20:40:23.114" endtime="20210513 20:40:23.115"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+<arg>${fileAbsolute}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:23.116" level="INFO">Sending /home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/resources/invalid_format_pcb.data to browser.</msg>
+<status status="PASS" starttime="20210513 20:40:23.115" endtime="20210513 20:40:23.617"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:21.966" endtime="20210513 20:40:23.618"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_INCORRECT_FORMAT_DIALOG_XPATH}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:23.619" endtime="20210513 20:40:24.097"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:24.099" endtime="20210513 20:40:24.316"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:26.092" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:24.316" endtime="20210513 20:40:26.092"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:24.097" endtime="20210513 20:40:26.093"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:21.961" endtime="20210513 20:40:26.093" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TS_05-03 – Zmena poctu vrstev PCB">
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_4_LAYERS_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:26.866" level="INFO">Element '//div[contains(@divname, "stencil-layer-pcb-div") and @class="formgroup"]/button[3]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:26.098" endtime="20210513 20:40:26.867"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:26.867" endtime="20210513 20:40:27.321"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:27.322" level="INFO">Simulating Mouse Over on element '//div[contains(@divname, "stencil-layer-pcb-div") and @class="formgroup"]/button[3]'.</msg>
+<status status="PASS" starttime="20210513 20:40:27.321" endtime="20210513 20:40:28.029"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:28.030" level="INFO">Clicking element '//div[contains(@divname, "stencil-layer-pcb-div") and @class="formgroup"]/button[3]'.</msg>
+<status status="PASS" starttime="20210513 20:40:28.029" endtime="20210513 20:40:28.566"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:26.097" endtime="20210513 20:40:28.567"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210513 20:40:30.568" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210513 20:40:28.567" endtime="20210513 20:40:30.569"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PRICE_XPATH}</arg>
+<arg>${TC_03_PRICE}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:31.026" level="INFO">Element '//strong[@class="ver ng-binding"]' contains text '$8.00'.</msg>
+<status status="PASS" starttime="20210513 20:40:30.570" endtime="20210513 20:40:31.027"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:31.029" endtime="20210513 20:40:32.245"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:33.088" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:32.246" endtime="20210513 20:40:33.088"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:31.028" endtime="20210513 20:40:33.089"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:26.095" endtime="20210513 20:40:33.089" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TS_05-04 – Zmena rozmeru PCB">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_HEIGHT_XPATH}</arg>
+<arg>${TC_04_HEIGHT}</arg>
+<arg>True</arg>
+</arguments>
+<msg timestamp="20210513 20:40:33.094" level="INFO">Typing text '50' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20210513 20:40:33.093" endtime="20210513 20:40:33.965"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WIDTH_XPATH}</arg>
+<arg>${TC_04_WIDTH}</arg>
+<arg>True</arg>
+</arguments>
+<msg timestamp="20210513 20:40:33.967" level="INFO">Typing text '50' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20210513 20:40:33.966" endtime="20210513 20:40:34.812"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_UNITS_XPATH}</arg>
+<arg>mm</arg>
+</arguments>
+<msg timestamp="20210513 20:40:34.814" level="INFO">Selecting options from selection list '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/select[1]' by label mm.</msg>
+<status status="PASS" starttime="20210513 20:40:34.813" endtime="20210513 20:40:36.196"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_DIM_EXCEED_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:36.442" level="INFO">Element '//span[contains(text(),"Pls don't exceed the max dimension of 400mm*500mm.")]' did not exist.</msg>
+<status status="PASS" starttime="20210513 20:40:36.196" endtime="20210513 20:40:36.442"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:36.446" endtime="20210513 20:40:36.669"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:38.846" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:36.670" endtime="20210513 20:40:38.846"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:36.443" endtime="20210513 20:40:38.846"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:33.091" endtime="20210513 20:40:38.846" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TS_05-05 – Vlozeni zapornych rozmeru PCB">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_HEIGHT_XPATH}</arg>
+<arg>${TC_05_HEIGHT}</arg>
+<arg>True</arg>
+</arguments>
+<msg timestamp="20210513 20:40:38.848" level="INFO">Typing text '-50' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20210513 20:40:38.848" endtime="20210513 20:40:40.008"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WIDTH_XPATH}</arg>
+<arg>${TC_05_WIDTH}</arg>
+<arg>True</arg>
+</arguments>
+<msg timestamp="20210513 20:40:40.011" level="INFO">Typing text '-50' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20210513 20:40:40.009" endtime="20210513 20:40:40.816"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_HEIGHT_XPATH}</arg>
+<arg>${TC_05_HEIGHT_EXPECTED}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:41.653" level="INFO">Content of text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[1]' is '50'.</msg>
+<status status="PASS" starttime="20210513 20:40:40.816" endtime="20210513 20:40:41.653"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WIDTH_XPATH}</arg>
+<arg>${TC_05_WIDTH_EXPECTED}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:42.509" level="INFO">Content of text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[2]' is '50'.</msg>
+<status status="PASS" starttime="20210513 20:40:41.654" endtime="20210513 20:40:42.509"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:42.510" endtime="20210513 20:40:42.724"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:44.254" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:42.725" endtime="20210513 20:40:44.255"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:42.509" endtime="20210513 20:40:44.255"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:38.847" endtime="20210513 20:40:44.255" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TS_05-06 – Vloženi velikych rozmeru PCB">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_HEIGHT_XPATH}</arg>
+<arg>${TC_06_HEIGHT}</arg>
+<arg>True</arg>
+</arguments>
+<msg timestamp="20210513 20:40:44.256" level="INFO">Typing text '600' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20210513 20:40:44.256" endtime="20210513 20:40:45.289"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_WIDTH_XPATH}</arg>
+<arg>${TC_06_WIDTH}</arg>
+<arg>True</arg>
+</arguments>
+<msg timestamp="20210513 20:40:45.290" level="INFO">Typing text '50' into text field '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20210513 20:40:45.290" endtime="20210513 20:40:46.082"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_UNITS_XPATH}</arg>
+<arg>mm</arg>
+</arguments>
+<msg timestamp="20210513 20:40:46.085" level="INFO">Selecting options from selection list '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/select[1]' by label mm.</msg>
+<status status="PASS" starttime="20210513 20:40:46.083" endtime="20210513 20:40:47.444"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_DIM_EXCEED_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:47.932" level="INFO">Element '//span[contains(text(),"Pls don't exceed the max dimension of 400mm*500mm.")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:47.445" endtime="20210513 20:40:47.933"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:47.937" endtime="20210513 20:40:48.171"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:49.524" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:48.172" endtime="20210513 20:40:49.524"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:47.935" endtime="20210513 20:40:49.524"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:44.255" endtime="20210513 20:40:49.525" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TS_05-07 – Zmena barvy PCB">
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_BLUE_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:50.236" level="INFO">Element '//button[contains(@ng-click, "setSelectedColor('Blue')")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:49.528" endtime="20210513 20:40:50.236"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:50.236" endtime="20210513 20:40:50.689"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:50.690" level="INFO">Simulating Mouse Over on element '//button[contains(@ng-click, "setSelectedColor('Blue')")]'.</msg>
+<status status="PASS" starttime="20210513 20:40:50.689" endtime="20210513 20:40:51.381"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:51.383" level="INFO">Clicking element '//button[contains(@ng-click, "setSelectedColor('Blue')")]'.</msg>
+<status status="PASS" starttime="20210513 20:40:51.382" endtime="20210513 20:40:51.930"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:49.527" endtime="20210513 20:40:51.931"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210513 20:40:52.932" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210513 20:40:51.931" endtime="20210513 20:40:52.933"></status>
+</kw>
+<kw name="Element Should Have Class" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_BLUE_XPATH}</arg>
+<arg>${TC_07_CURRENT_COLOR_CLASS}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20210513 20:40:53.370" level="INFO">${class} = blue1 btn btnlg relative cur</msg>
+<status status="PASS" starttime="20210513 20:40:52.935" endtime="20210513 20:40:53.370"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${class}</arg>
+<arg>${className}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:53.370" endtime="20210513 20:40:53.371"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:52.933" endtime="20210513 20:40:53.372"></status>
+</kw>
+<kw name="Element Should Not Have Class" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_GREEN_XPATH}</arg>
+<arg>${TC_07_CURRENT_COLOR_CLASS}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20210513 20:40:53.827" level="INFO">${class} = green btn btnlg relative</msg>
+<status status="PASS" starttime="20210513 20:40:53.374" endtime="20210513 20:40:53.828"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${class}</arg>
+<arg>${className}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:53.828" endtime="20210513 20:40:53.829"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:53.372" endtime="20210513 20:40:53.829"></status>
+</kw>
+<kw name="Element Should Not Have Class" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_RED_XPATH}</arg>
+<arg>${TC_07_CURRENT_COLOR_CLASS}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20210513 20:40:54.263" level="INFO">${class} = red1 btn btnlg relative</msg>
+<status status="PASS" starttime="20210513 20:40:53.831" endtime="20210513 20:40:54.263"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${class}</arg>
+<arg>${className}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:54.263" endtime="20210513 20:40:54.264"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:53.830" endtime="20210513 20:40:54.264"></status>
+</kw>
+<kw name="Element Should Not Have Class" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_YELLOW_XPATH}</arg>
+<arg>${TC_07_CURRENT_COLOR_CLASS}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20210513 20:40:54.723" level="INFO">${class} = yellow btn btnlg relative</msg>
+<status status="PASS" starttime="20210513 20:40:54.266" endtime="20210513 20:40:54.723"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${class}</arg>
+<arg>${className}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:54.723" endtime="20210513 20:40:54.724"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:54.265" endtime="20210513 20:40:54.725"></status>
+</kw>
+<kw name="Element Should Not Have Class" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_WHITE_XPATH}</arg>
+<arg>${TC_07_CURRENT_COLOR_CLASS}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20210513 20:40:55.161" level="INFO">${class} = white btn btnlg relative</msg>
+<status status="PASS" starttime="20210513 20:40:54.726" endtime="20210513 20:40:55.161"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${class}</arg>
+<arg>${className}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:55.161" endtime="20210513 20:40:55.162"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:54.725" endtime="20210513 20:40:55.163"></status>
+</kw>
+<kw name="Element Should Not Have Class" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_COLOR_BLACK_XPATH}</arg>
+<arg>${TC_07_CURRENT_COLOR_CLASS}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20210513 20:40:55.595" level="INFO">${class} = black btn btnlg relative</msg>
+<status status="PASS" starttime="20210513 20:40:55.165" endtime="20210513 20:40:55.596"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${class}</arg>
+<arg>${className}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:55.596" endtime="20210513 20:40:55.597"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:55.163" endtime="20210513 20:40:55.597"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:40:55.600" endtime="20210513 20:40:55.820"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:57.483" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:55.820" endtime="20210513 20:40:57.483"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:55.598" endtime="20210513 20:40:57.484"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:49.526" endtime="20210513 20:40:57.484" critical="yes"></status>
+</test>
+<test id="s1-t8" name="TS_05-08 – Zmena tloustky PCB">
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_THICKNESS_2_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:58.177" level="INFO">Element '//button[contains(text(),'2.0')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:40:57.487" endtime="20210513 20:40:58.178"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:40:58.178" endtime="20210513 20:40:58.631"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:58.632" level="INFO">Simulating Mouse Over on element '//button[contains(text(),'2.0')]'.</msg>
+<status status="PASS" starttime="20210513 20:40:58.632" endtime="20210513 20:40:59.335"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:40:59.336" level="INFO">Clicking element '//button[contains(text(),'2.0')]'.</msg>
+<status status="PASS" starttime="20210513 20:40:59.336" endtime="20210513 20:40:59.876"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:57.486" endtime="20210513 20:40:59.876"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210513 20:41:01.877" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210513 20:40:59.877" endtime="20210513 20:41:01.878"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PRICE_XPATH}</arg>
+<arg>${TC_08_PRICE}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:02.336" level="INFO">Element '//strong[@class="ver ng-binding"]' contains text '$38.90'.</msg>
+<status status="PASS" starttime="20210513 20:41:01.878" endtime="20210513 20:41:02.337"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:41:02.338" endtime="20210513 20:41:02.546"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:04.036" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:02.547" endtime="20210513 20:41:04.036"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:02.337" endtime="20210513 20:41:04.037"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:40:57.485" endtime="20210513 20:41:04.037" critical="yes"></status>
+</test>
+<test id="s1-t9" name="TS_05-09 – Zobrazeni pokrocilych moznosti">
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_ACCEPT_COOKIES_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:04.653" level="INFO">Element '//button[@ng-click="accept()"]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:04.038" endtime="20210513 20:41:04.654"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:04.654" endtime="20210513 20:41:05.111"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:05.112" level="INFO">Simulating Mouse Over on element '//button[@ng-click="accept()"]'.</msg>
+<status status="PASS" starttime="20210513 20:41:05.112" endtime="20210513 20:41:05.825"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:05.827" level="INFO">Clicking element '//button[@ng-click="accept()"]'.</msg>
+<status status="PASS" starttime="20210513 20:41:05.826" endtime="20210513 20:41:06.353"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:04.038" endtime="20210513 20:41:06.353"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADVANCED_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:06.354" endtime="20210513 20:41:07.083"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_ADVANCED_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:07.540" level="INFO">Element '//div[@ng-click="form.isShowAdvancedOptions=!form.isShowAdvancedOptions;"]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:07.085" endtime="20210513 20:41:07.541"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:07.541" endtime="20210513 20:41:07.983"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:07.984" level="INFO">Simulating Mouse Over on element '//div[@ng-click="form.isShowAdvancedOptions=!form.isShowAdvancedOptions;"]'.</msg>
+<status status="PASS" starttime="20210513 20:41:07.983" endtime="20210513 20:41:08.672"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:08.673" level="INFO">Clicking element '//div[@ng-click="form.isShowAdvancedOptions=!form.isShowAdvancedOptions;"]'.</msg>
+<status status="PASS" starttime="20210513 20:41:08.672" endtime="20210513 20:41:09.164"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:07.084" endtime="20210513 20:41:09.165"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADVANCED_OPT2_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:09.165" endtime="20210513 20:41:09.884"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADVANCED_OPT2_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:10.354" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[36]/div[5]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:09.884" endtime="20210513 20:41:10.355"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:41:10.357" endtime="20210513 20:41:10.580"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:12.338" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:10.580" endtime="20210513 20:41:12.338"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:10.356" endtime="20210513 20:41:12.338"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:04.037" endtime="20210513 20:41:12.339" critical="yes"></status>
+</test>
+<test id="s1-t10" name="TS_05-10 – Zmena poctu objednanych kusu">
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_QTY_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:13.006" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/a[1]/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:12.340" endtime="20210513 20:41:13.006"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:13.007" endtime="20210513 20:41:13.454"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:13.455" level="INFO">Simulating Mouse Over on element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/a[1]/span[1]'.</msg>
+<status status="PASS" starttime="20210513 20:41:13.454" endtime="20210513 20:41:14.146"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:14.147" level="INFO">Clicking element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/a[1]/span[1]'.</msg>
+<status status="PASS" starttime="20210513 20:41:14.146" endtime="20210513 20:41:14.667"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:12.340" endtime="20210513 20:41:14.667"></status>
+</kw>
+<kw name="Click On" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_QTY_100_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:15.134" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/ul[1]/li[9]/button[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:14.668" endtime="20210513 20:41:15.134"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:15.135" endtime="20210513 20:41:15.587"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:15.588" level="INFO">Simulating Mouse Over on element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/ul[1]/li[9]/button[1]'.</msg>
+<status status="PASS" starttime="20210513 20:41:15.587" endtime="20210513 20:41:16.289"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:16.290" level="INFO">Clicking element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/ul[1]/li[9]/button[1]'.</msg>
+<status status="PASS" starttime="20210513 20:41:16.289" endtime="20210513 20:41:16.825"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:14.668" endtime="20210513 20:41:16.826"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210513 20:41:17.828" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210513 20:41:16.827" endtime="20210513 20:41:17.828"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_QTY_XPATH}</arg>
+<arg>${TC_10_QTY}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:18.285" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/a[1]/span[1]' contains text '100'.</msg>
+<status status="PASS" starttime="20210513 20:41:17.829" endtime="20210513 20:41:18.285"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PRICE_XPATH}</arg>
+<arg>${TC_10_PRICE}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:18.734" level="INFO">Element '//strong[@class="ver ng-binding"]' contains text '$73.00'.</msg>
+<status status="PASS" starttime="20210513 20:41:18.286" endtime="20210513 20:41:18.735"></status>
+</kw>
+<kw name="Reload Page And Wait" library="keywords" type="teardown">
+<arguments>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210513 20:41:18.737" endtime="20210513 20:41:20.339"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:21.396" level="INFO">Element '//body' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:20.339" endtime="20210513 20:41:21.397"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:18.735" endtime="20210513 20:41:21.397"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:12.339" endtime="20210513 20:41:21.398" critical="yes"></status>
+</test>
+<test id="s1-t11" name="TS_05-11 – Resetovani nahraneho navrhu PCB">
+<kw name="File Check" type="setup">
+<arguments>
+<arg>${VALID_PCB}</arg>
+</arguments>
+<kw name="File Exists" library="file">
+<arguments>
+<arg>${file}</arg>
+</arguments>
+<assign>
+<var>${fileExists}</var>
+</assign>
+<msg timestamp="20210513 20:41:21.404" level="INFO">${fileExists} = True</msg>
+<status status="PASS" starttime="20210513 20:41:21.403" endtime="20210513 20:41:21.404"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${fileExists}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:21.404" endtime="20210513 20:41:21.405"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:21.401" endtime="20210513 20:41:21.405"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>${VALID_PCB}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:21.407" endtime="20210513 20:41:21.656"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:21.657" endtime="20210513 20:41:22.359"></status>
+</kw>
+<kw name="File Absolute Path" library="file">
+<arguments>
+<arg>${file}</arg>
+</arguments>
+<assign>
+<var>${fileAbsolute}</var>
+</assign>
+<msg timestamp="20210513 20:41:22.361" level="INFO">${fileAbsolute} = /home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/resources/valid_pcb.zip</msg>
+<status status="PASS" starttime="20210513 20:41:22.359" endtime="20210513 20:41:22.361"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_ADD_GERBER_FILE_XPATH}</arg>
+<arg>${fileAbsolute}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:22.362" level="INFO">Sending /home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/resources/valid_pcb.zip to browser.</msg>
+<status status="PASS" starttime="20210513 20:41:22.361" endtime="20210513 20:41:22.862"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:21.406" endtime="20210513 20:41:22.862"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_PCB_DESIGN_VIEW_XPATH}</arg>
+<arg>100s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:22.863" endtime="20210513 20:41:49.946"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_ORDER_RESET_FILE_XPATH}</arg>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:50.415" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/a[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:49.948" endtime="20210513 20:41:50.416"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:50.416" endtime="20210513 20:41:50.868"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:50.869" level="INFO">Simulating Mouse Over on element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:41:50.868" endtime="20210513 20:41:51.576"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:51.577" level="INFO">Clicking element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:41:51.577" endtime="20210513 20:41:52.088"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:41:52.089" endtime="20210513 20:41:52.683"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:49.947" endtime="20210513 20:41:52.684"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_ORDER_UPLOAD_BTN_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:41:53.165" level="INFO">Element '//body/div[@id='myContainer']/div[2]/div[1]/div[1]/div[1]/div[2]/label[1]/a[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:41:52.685" endtime="20210513 20:41:53.166"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:21.399" endtime="20210513 20:41:53.167" critical="yes"></status>
+</test>
+<kw name="TS_05 Postcondition" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210513 20:41:53.172" endtime="20210513 20:41:53.438"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:41:53.172" endtime="20210513 20:41:53.439"></status>
+</kw>
+<doc>Tato sada overi zakladni funkcnost systemu pro vytvareni objednavky noveho PCB</doc>
+<metadata>
+<item name="Author">Martin Krcma</item>
+</metadata>
+<status status="PASS" starttime="20210513 20:39:38.728" endtime="20210513 20:41:53.439"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0">Critical Tests</stat>
+<stat pass="11" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="11" fail="0" id="s1" name="TS 05">TS 05</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

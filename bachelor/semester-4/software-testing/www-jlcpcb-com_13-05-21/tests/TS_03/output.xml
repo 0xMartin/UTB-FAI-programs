@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on linux)" generated="20210513 20:37:48.414" rpa="false">
+<suite id="s1" name="TS 03" source="/home/martin/Desktop/MartinKrcma_www-jlcpcb-com_13-05-21/tests/TS_03/TS_03.robot">
+<kw name="TS_03 Precondition" type="setup">
+<kw name="Open Browser With URL" library="keywords">
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>${PAGE_HOME_URL}</arg>
+<arg>${PAGE_HOME_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210513 20:37:48.586" level="INFO">Opening browser 'Chrome' to base url 'https://jlcpcb.com/'.</msg>
+<status status="PASS" starttime="20210513 20:37:48.585" endtime="20210513 20:37:52.977"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:37:52.977" endtime="20210513 20:37:53.013"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:37:48.585" endtime="20210513 20:37:53.013"></status>
+</kw>
+<kw name="Init Tests" library="settings">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210513 20:37:53.014" endtime="20210513 20:37:53.117"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${SELENIUM_SPEED}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:37:53.118" endtime="20210513 20:37:53.118"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${SCREENSHOT_DIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:37:53.118" endtime="20210513 20:37:53.119"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:37:53.013" endtime="20210513 20:37:53.119"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:37:48.585" endtime="20210513 20:37:53.119"></status>
+</kw>
+<test id="s1-t1" name="TS_03-01 – Odkaz navigace „Why JLCPCB?“">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:37:53.614" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:37:53.121" endtime="20210513 20:37:53.615"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_WHY_XPATH}</arg>
+<arg>${PAGE_ABOUT_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:37:54.108" level="INFO">Element '//span[contains(text(),'Why JLCPCB?')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:37:53.618" endtime="20210513 20:37:54.109"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:37:54.109" endtime="20210513 20:37:54.552"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:37:54.553" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Why JLCPCB?')]'.</msg>
+<status status="PASS" starttime="20210513 20:37:54.552" endtime="20210513 20:37:55.244"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:37:55.245" level="INFO">Clicking element '//span[contains(text(),'Why JLCPCB?')]'.</msg>
+<status status="PASS" starttime="20210513 20:37:55.244" endtime="20210513 20:37:57.850"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:37:57.851" endtime="20210513 20:37:58.315"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:37:53.616" endtime="20210513 20:37:58.315"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${PAGE_ABOUT_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:37:58.525" level="INFO">Current location is 'https://jlcpcb.com/aboutUs'.</msg>
+<status status="PASS" starttime="20210513 20:37:58.315" endtime="20210513 20:37:58.526"></status>
+</kw>
+<kw name="Log Location And Back" type="teardown">
+<kw name="Log Location" library="SeleniumLibrary">
+<doc>Logs and returns the current browser window URL.</doc>
+<msg timestamp="20210513 20:37:58.734" level="INFO">https://jlcpcb.com/aboutUs</msg>
+<status status="PASS" starttime="20210513 20:37:58.527" endtime="20210513 20:37:58.734"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20210513 20:37:58.735" endtime="20210513 20:38:00.426"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:37:58.526" endtime="20210513 20:38:00.427"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:37:53.119" endtime="20210513 20:38:00.427" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TS_03-02 – Odkaz navigace „Capabilities“">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:00.954" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:00.432" endtime="20210513 20:38:00.955"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_CAPABILITIES_XPATH}</arg>
+<arg>${PAGE_CAPABILITIES_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:01.463" level="INFO">Element '//span[contains(text(),'Capabilities')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:00.958" endtime="20210513 20:38:01.464"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:01.465" endtime="20210513 20:38:01.918"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:01.920" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Capabilities')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:01.919" endtime="20210513 20:38:02.629"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:02.631" level="INFO">Clicking element '//span[contains(text(),'Capabilities')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:02.630" endtime="20210513 20:38:04.806"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:04.807" endtime="20210513 20:38:05.250"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:00.956" endtime="20210513 20:38:05.251"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${PAGE_CAPABILITIES_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:05.475" level="INFO">Current location is 'https://jlcpcb.com/capabilities/Capabilities'.</msg>
+<status status="PASS" starttime="20210513 20:38:05.252" endtime="20210513 20:38:05.475"></status>
+</kw>
+<kw name="Log Location And Back" type="teardown">
+<kw name="Log Location" library="SeleniumLibrary">
+<doc>Logs and returns the current browser window URL.</doc>
+<msg timestamp="20210513 20:38:05.684" level="INFO">https://jlcpcb.com/capabilities/Capabilities</msg>
+<status status="PASS" starttime="20210513 20:38:05.477" endtime="20210513 20:38:05.685"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20210513 20:38:05.685" endtime="20210513 20:38:07.207"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:05.476" endtime="20210513 20:38:07.208"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:00.429" endtime="20210513 20:38:07.208" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TS_03-03 – Odkaz navigace „Support“">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:07.700" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:07.213" endtime="20210513 20:38:07.700"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_SUPPORT_XPATH}</arg>
+<arg>${PAGE_SUPPORT_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:08.204" level="INFO">Element '//span[contains(text(),'Support')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:07.704" endtime="20210513 20:38:08.204"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:08.205" endtime="20210513 20:38:08.672"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:08.674" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Support')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:08.673" endtime="20210513 20:38:09.396"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:09.398" level="INFO">Clicking element '//span[contains(text(),'Support')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:09.397" endtime="20210513 20:38:09.965"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:09.966" endtime="20210513 20:38:10.469"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:07.701" endtime="20210513 20:38:10.470"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:10.673" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 | CDwindow-388012DE2665E46C905A121C631156D9 ]</msg>
+<status status="PASS" starttime="20210513 20:38:10.470" endtime="20210513 20:38:10.673"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:10.674" level="INFO">Length is 2</msg>
+<msg timestamp="20210513 20:38:10.674" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20210513 20:38:10.673" endtime="20210513 20:38:10.674"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:10.674" level="INFO">${latest_window} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:10.674" endtime="20210513 20:38:10.674"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:10.674" endtime="20210513 20:38:12.574"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:10.470" endtime="20210513 20:38:12.575"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>${PAGE_SUPPORT_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:12.832" level="INFO">Current location contains 'https://support.jlcpcb.com/'.</msg>
+<status status="PASS" starttime="20210513 20:38:12.576" endtime="20210513 20:38:12.833"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_03-03${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Close Window</arg>
+<arg>AND</arg>
+<arg>Select Last Browser Tab</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_03-03${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:13.243" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_03-03-screenshot.png"&gt;&lt;img src="../screenshots/TS_03-03-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:38:12.836" endtime="20210513 20:38:13.243"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210513 20:38:13.244" endtime="20210513 20:38:13.502"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:13.715" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 ]</msg>
+<status status="PASS" starttime="20210513 20:38:13.504" endtime="20210513 20:38:13.715"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:13.717" level="INFO">Length is 1</msg>
+<msg timestamp="20210513 20:38:13.717" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:13.716" endtime="20210513 20:38:13.718"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:13.720" level="INFO">${latest_window} = 0</msg>
+<status status="PASS" starttime="20210513 20:38:13.718" endtime="20210513 20:38:13.720"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:13.721" endtime="20210513 20:38:14.155"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:13.503" endtime="20210513 20:38:14.155"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:12.835" endtime="20210513 20:38:14.156"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:07.210" endtime="20210513 20:38:14.156" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TS_03-04 – Drop down menu „Resources“">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:14.630" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:14.161" endtime="20210513 20:38:14.630"></status>
+</kw>
+<kw name="Open Drop Down Menu Res">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:14.633" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Resources')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:14.633" endtime="20210513 20:38:15.341"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_DROP_DOWN_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:15.823" level="INFO">Element '//body/div[2]/div[2]/div[2]/div[1]/div[3]/ul[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:15.341" endtime="20210513 20:38:15.823"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:14.631" endtime="20210513 20:38:15.824"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="teardown">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_03-04${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:16.330" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_03-04-screenshot.png"&gt;&lt;img src="../screenshots/TS_03-04-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:38:15.825" endtime="20210513 20:38:16.331"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:14.158" endtime="20210513 20:38:16.331" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TS_03-05 – Drop down menu Resources – SMT assembly">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:16.808" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:16.335" endtime="20210513 20:38:16.809"></status>
+</kw>
+<kw name="Open Drop Down Menu Res">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:16.811" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Resources')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:16.810" endtime="20210513 20:38:17.499"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_DROP_DOWN_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:17.947" level="INFO">Element '//body/div[2]/div[2]/div[2]/div[1]/div[3]/ul[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:17.500" endtime="20210513 20:38:17.947"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:16.809" endtime="20210513 20:38:17.947"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_SMT_ASSEMBLY_XPATH}</arg>
+<arg>${PAGE_STM_ASSEMBLY_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:18.407" level="INFO">Element '//a[contains(text(),'SMT Assembly')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:17.948" endtime="20210513 20:38:18.407"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:18.408" endtime="20210513 20:38:18.846"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:18.847" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'SMT Assembly')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:18.846" endtime="20210513 20:38:19.555"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:19.557" level="INFO">Clicking element '//a[contains(text(),'SMT Assembly')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:19.556" endtime="20210513 20:38:20.084"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:20.084" endtime="20210513 20:38:20.515"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:17.947" endtime="20210513 20:38:20.515"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:20.719" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 | CDwindow-F97194BD04EF3B7EF7096D088E9E03EC ]</msg>
+<status status="PASS" starttime="20210513 20:38:20.516" endtime="20210513 20:38:20.719"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:20.719" level="INFO">Length is 2</msg>
+<msg timestamp="20210513 20:38:20.719" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20210513 20:38:20.719" endtime="20210513 20:38:20.719"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:20.720" level="INFO">${latest_window} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:20.720" endtime="20210513 20:38:20.720"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:20.720" endtime="20210513 20:38:22.638"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:20.516" endtime="20210513 20:38:22.639"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${PAGE_STM_ASSEMBLY_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:22.868" level="INFO">Current location is 'https://jlcpcb.com/smt-assembly'.</msg>
+<status status="PASS" starttime="20210513 20:38:22.639" endtime="20210513 20:38:22.869"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_03-05${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Close Window</arg>
+<arg>AND</arg>
+<arg>Select Last Browser Tab</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_03-05${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:23.369" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_03-05-screenshot.png"&gt;&lt;img src="../screenshots/TS_03-05-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:38:22.870" endtime="20210513 20:38:23.369"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210513 20:38:23.369" endtime="20210513 20:38:23.631"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:23.843" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 ]</msg>
+<status status="PASS" starttime="20210513 20:38:23.634" endtime="20210513 20:38:23.843"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:23.845" level="INFO">Length is 1</msg>
+<msg timestamp="20210513 20:38:23.845" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:23.844" endtime="20210513 20:38:23.845"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:23.848" level="INFO">${latest_window} = 0</msg>
+<status status="PASS" starttime="20210513 20:38:23.846" endtime="20210513 20:38:23.848"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:23.848" endtime="20210513 20:38:24.280"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:23.632" endtime="20210513 20:38:24.280"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:22.870" endtime="20210513 20:38:24.280"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:16.333" endtime="20210513 20:38:24.281" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TS_03-06 – Drop down menu Resources – SMT Parts Library">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:24.753" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:24.285" endtime="20210513 20:38:24.753"></status>
+</kw>
+<kw name="Open Drop Down Menu Res">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:24.756" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Resources')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:24.756" endtime="20210513 20:38:25.465"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_DROP_DOWN_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:25.914" level="INFO">Element '//body/div[2]/div[2]/div[2]/div[1]/div[3]/ul[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:25.465" endtime="20210513 20:38:25.915"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:24.754" endtime="20210513 20:38:25.915"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_SMT_PART_LIB_XPATH}</arg>
+<arg>${PAGE_STM_PARTS_LIB_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:26.405" level="INFO">Element '//a[contains(text(),'SMT Parts Library')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:25.919" endtime="20210513 20:38:26.405"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:26.406" endtime="20210513 20:38:26.847"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:26.848" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'SMT Parts Library')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:26.848" endtime="20210513 20:38:27.557"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:27.559" level="INFO">Clicking element '//a[contains(text(),'SMT Parts Library')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:27.558" endtime="20210513 20:38:28.084"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:28.084" endtime="20210513 20:38:28.554"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:25.916" endtime="20210513 20:38:28.555"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:28.774" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 | CDwindow-177F991014DBCB3C74C593EF6861344C ]</msg>
+<status status="PASS" starttime="20210513 20:38:28.561" endtime="20210513 20:38:28.775"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:28.775" level="INFO">Length is 2</msg>
+<msg timestamp="20210513 20:38:28.775" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20210513 20:38:28.775" endtime="20210513 20:38:28.775"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:28.776" level="INFO">${latest_window} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:28.776" endtime="20210513 20:38:28.776"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:28.776" endtime="20210513 20:38:30.620"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:28.556" endtime="20210513 20:38:30.620"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${PAGE_STM_PARTS_LIB_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:30.854" level="INFO">Current location is 'https://jlcpcb.com/parts'.</msg>
+<status status="PASS" starttime="20210513 20:38:30.621" endtime="20210513 20:38:30.855"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Log Location</arg>
+<arg>AND</arg>
+<arg>Close Window</arg>
+<arg>AND</arg>
+<arg>Select Last Browser Tab</arg>
+</arguments>
+<kw name="Log Location" library="SeleniumLibrary">
+<doc>Logs and returns the current browser window URL.</doc>
+<msg timestamp="20210513 20:38:31.072" level="INFO">https://jlcpcb.com/parts</msg>
+<status status="PASS" starttime="20210513 20:38:30.858" endtime="20210513 20:38:31.072"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210513 20:38:31.073" endtime="20210513 20:38:31.347"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:31.564" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 ]</msg>
+<status status="PASS" starttime="20210513 20:38:31.350" endtime="20210513 20:38:31.564"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:31.566" level="INFO">Length is 1</msg>
+<msg timestamp="20210513 20:38:31.566" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:31.565" endtime="20210513 20:38:31.566"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:31.568" level="INFO">${latest_window} = 0</msg>
+<status status="PASS" starttime="20210513 20:38:31.567" endtime="20210513 20:38:31.568"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:31.569" endtime="20210513 20:38:32.001"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:31.348" endtime="20210513 20:38:32.002"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:30.857" endtime="20210513 20:38:32.002"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:24.282" endtime="20210513 20:38:32.003" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TS_03-07 – Drop down menu Resources – EasyEDA">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:32.487" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:32.008" endtime="20210513 20:38:32.488"></status>
+</kw>
+<kw name="Open Drop Down Menu Res">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:32.491" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Resources')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:32.490" endtime="20210513 20:38:33.217"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_DROP_DOWN_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:33.713" level="INFO">Element '//body/div[2]/div[2]/div[2]/div[1]/div[3]/ul[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:33.218" endtime="20210513 20:38:33.713"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:32.489" endtime="20210513 20:38:33.714"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_EEDA_XPATH}</arg>
+<arg>${PAGE_EASYEDA_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:34.179" level="INFO">Element '//p[contains(@class,'mt10')]/a[contains(text(),'EasyEDA')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:33.716" endtime="20210513 20:38:34.180"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:34.181" endtime="20210513 20:38:34.613"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:34.614" level="INFO">Simulating Mouse Over on element '//p[contains(@class,'mt10')]/a[contains(text(),'EasyEDA')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:34.614" endtime="20210513 20:38:35.321"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:35.323" level="INFO">Clicking element '//p[contains(@class,'mt10')]/a[contains(text(),'EasyEDA')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:35.322" endtime="20210513 20:38:35.867"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:35.867" endtime="20210513 20:38:36.302"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:33.714" endtime="20210513 20:38:36.302"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:36.505" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 | CDwindow-5EBB93402E7629EBB5424889863DD71E ]</msg>
+<status status="PASS" starttime="20210513 20:38:36.303" endtime="20210513 20:38:36.505"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:36.506" level="INFO">Length is 2</msg>
+<msg timestamp="20210513 20:38:36.506" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20210513 20:38:36.506" endtime="20210513 20:38:36.506"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:36.507" level="INFO">${latest_window} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:36.506" endtime="20210513 20:38:36.507"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:36.507" endtime="20210513 20:38:38.379"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:36.302" endtime="20210513 20:38:38.380"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>${PAGE_EASYEDA_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:38.611" level="INFO">Current location contains 'https://easyeda.com/'.</msg>
+<status status="PASS" starttime="20210513 20:38:38.381" endtime="20210513 20:38:38.612"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_03-07${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Close Window</arg>
+<arg>AND</arg>
+<arg>Select Last Browser Tab</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_03-07${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:39.303" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_03-07-screenshot.png"&gt;&lt;img src="../screenshots/TS_03-07-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:38:38.615" endtime="20210513 20:38:39.304"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210513 20:38:39.304" endtime="20210513 20:38:39.540"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:39.750" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 ]</msg>
+<status status="PASS" starttime="20210513 20:38:39.542" endtime="20210513 20:38:39.750"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:39.751" level="INFO">Length is 1</msg>
+<msg timestamp="20210513 20:38:39.752" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:39.751" endtime="20210513 20:38:39.752"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:39.754" level="INFO">${latest_window} = 0</msg>
+<status status="PASS" starttime="20210513 20:38:39.752" endtime="20210513 20:38:39.754"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:39.754" endtime="20210513 20:38:40.186"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:39.540" endtime="20210513 20:38:40.186"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:38.614" endtime="20210513 20:38:40.187"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:32.005" endtime="20210513 20:38:40.187" critical="yes"></status>
+</test>
+<test id="s1-t8" name="TS_03-08 – Drop down menu Resources – LCSC electronics">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:40.637" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:40.190" endtime="20210513 20:38:40.637"></status>
+</kw>
+<kw name="Open Drop Down Menu Res">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:40.640" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Resources')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:40.639" endtime="20210513 20:38:41.337"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_DROP_DOWN_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:41.786" level="INFO">Element '//body/div[2]/div[2]/div[2]/div[1]/div[3]/ul[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:41.338" endtime="20210513 20:38:41.786"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:40.638" endtime="20210513 20:38:41.787"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_RES_LCSC_XPATH}</arg>
+<arg>${PAGE_LCSC_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:42.245" level="INFO">Element '//a[contains(text(),'LCSC Electronics')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:41.789" endtime="20210513 20:38:42.246"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:42.246" endtime="20210513 20:38:42.690"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:42.691" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'LCSC Electronics')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:42.690" endtime="20210513 20:38:43.399"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:43.400" level="INFO">Clicking element '//a[contains(text(),'LCSC Electronics')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:43.399" endtime="20210513 20:38:43.915"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:43.915" endtime="20210513 20:38:44.381"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:41.787" endtime="20210513 20:38:44.381"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:44.590" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 | CDwindow-43942C89D6F55B47D02FA749B7877835 ]</msg>
+<status status="PASS" starttime="20210513 20:38:44.383" endtime="20210513 20:38:44.591"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:44.592" level="INFO">Length is 2</msg>
+<msg timestamp="20210513 20:38:44.593" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20210513 20:38:44.591" endtime="20210513 20:38:44.593"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:44.595" level="INFO">${latest_window} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:44.594" endtime="20210513 20:38:44.595"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:44.595" endtime="20210513 20:38:46.567"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:44.382" endtime="20210513 20:38:46.567"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>${PAGE_LCSC_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:49.025" level="INFO">Current location contains 'https://lcsc.com'.</msg>
+<status status="PASS" starttime="20210513 20:38:46.568" endtime="20210513 20:38:49.025"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Log Location</arg>
+<arg>AND</arg>
+<arg>Close Window</arg>
+<arg>AND</arg>
+<arg>Select Last Browser Tab</arg>
+</arguments>
+<kw name="Log Location" library="SeleniumLibrary">
+<doc>Logs and returns the current browser window URL.</doc>
+<msg timestamp="20210513 20:38:49.243" level="INFO">https://lcsc.com/?href=jlc-home&amp;source=jlc</msg>
+<status status="PASS" starttime="20210513 20:38:49.028" endtime="20210513 20:38:49.244"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210513 20:38:49.245" endtime="20210513 20:38:49.550"></status>
+</kw>
+<kw name="Select Last Browser Tab" library="keywords">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>@{windows}</var>
+</assign>
+<msg timestamp="20210513 20:38:49.764" level="INFO">@{windows} = [ CDwindow-A68917889A3D89C01C71B05E9ED4DE81 ]</msg>
+<status status="PASS" starttime="20210513 20:38:49.553" endtime="20210513 20:38:49.764"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${windows}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210513 20:38:49.766" level="INFO">Length is 1</msg>
+<msg timestamp="20210513 20:38:49.766" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20210513 20:38:49.765" endtime="20210513 20:38:49.767"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}-1</arg>
+</arguments>
+<assign>
+<var>${latest_window}</var>
+</assign>
+<msg timestamp="20210513 20:38:49.769" level="INFO">${latest_window} = 0</msg>
+<status status="PASS" starttime="20210513 20:38:49.767" endtime="20210513 20:38:49.769"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${windows}[${latest_window}]</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:49.769" endtime="20210513 20:38:50.205"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:49.551" endtime="20210513 20:38:50.206"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:49.027" endtime="20210513 20:38:50.206"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:40.189" endtime="20210513 20:38:50.207" critical="yes"></status>
+</test>
+<test id="s1-t9" name="TS_03-09 – Order now">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:50.713" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:50.211" endtime="20210513 20:38:50.713"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_ORDER_XPATH}</arg>
+<arg>${PAGE_ORDER_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:51.201" level="INFO">Element '//a[contains(text(),'Order now')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:50.718" endtime="20210513 20:38:51.201"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:51.201" endtime="20210513 20:38:51.618"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:51.621" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'Order now')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:51.619" endtime="20210513 20:38:52.374"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:52.377" level="INFO">Clicking element '//a[contains(text(),'Order now')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:52.375" endtime="20210513 20:38:54.428"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:54.428" endtime="20210513 20:38:55.643"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:50.715" endtime="20210513 20:38:55.644"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>${PAGE_ORDER_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:55.861" level="INFO">Current location contains 'https://cart.jlcpcb.com'.</msg>
+<status status="PASS" starttime="20210513 20:38:55.645" endtime="20210513 20:38:55.862"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Log Location</arg>
+<arg>AND</arg>
+<arg>Go Back</arg>
+</arguments>
+<kw name="Log Location" library="SeleniumLibrary">
+<doc>Logs and returns the current browser window URL.</doc>
+<msg timestamp="20210513 20:38:56.083" level="INFO">https://cart.jlcpcb.com/quote?_ga=2.58438185.243320532.1620931072-931548439.1620931072</msg>
+<status status="PASS" starttime="20210513 20:38:55.865" endtime="20210513 20:38:56.085"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20210513 20:38:56.086" endtime="20210513 20:38:58.013"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:55.863" endtime="20210513 20:38:58.014"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:50.209" endtime="20210513 20:38:58.015" critical="yes"></status>
+</test>
+<test id="s1-t10" name="TS_03-13 – Navrat zpet na hlavni stranku">
+<kw name="Element Should Be Visible" library="SeleniumLibrary" type="setup">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_XPATH}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:58.534" level="INFO">Element '//div[contains(@class, "home-header-cont")]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:58.024" endtime="20210513 20:38:58.535"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_HOME_NAVIGATION_CAPABILITIES_XPATH}</arg>
+<arg>${PAGE_CAPABILITIES_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:58.998" level="INFO">Element '//span[contains(text(),'Capabilities')]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:38:58.539" endtime="20210513 20:38:58.998"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:38:58.998" endtime="20210513 20:38:59.438"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:38:59.440" level="INFO">Simulating Mouse Over on element '//span[contains(text(),'Capabilities')]'.</msg>
+<status status="PASS" starttime="20210513 20:38:59.439" endtime="20210513 20:39:00.168"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:00.170" level="INFO">Clicking element '//span[contains(text(),'Capabilities')]'.</msg>
+<status status="PASS" starttime="20210513 20:39:00.169" endtime="20210513 20:39:02.449"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:02.450" endtime="20210513 20:39:02.891"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:58.536" endtime="20210513 20:39:02.892"></status>
+</kw>
+<kw name="Click On Element And Wait" library="keywords">
+<arguments>
+<arg>${PAGE_CAPABILITIES_BACK_XPATH}</arg>
+<arg>${PAGE_HOME_WAIT_FOR_ELEMENT_XPATH}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:03.343" level="INFO">Element '//div[contains(@class, "logo fl")]/a[1]' is displayed.</msg>
+<status status="PASS" starttime="20210513 20:39:02.893" endtime="20210513 20:39:03.343"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:03.344" endtime="20210513 20:39:03.789"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:03.792" level="INFO">Simulating Mouse Over on element '//div[contains(@class, "logo fl")]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:03.790" endtime="20210513 20:39:04.490"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_el}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:04.491" level="INFO">Clicking element '//div[contains(@class, "logo fl")]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 20:39:04.490" endtime="20210513 20:39:06.365"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210513 20:39:06.366" endtime="20210513 20:39:06.866"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:02.892" endtime="20210513 20:39:06.867"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${PAGE_HOME_URL}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:07.083" level="INFO">Current location is 'https://jlcpcb.com/'.</msg>
+<status status="PASS" starttime="20210513 20:39:06.868" endtime="20210513 20:39:07.083"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>TS_03-13${SCREENSHOT_NAME_POSTFIX}</arg>
+<arg>AND</arg>
+<arg>Go Back</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TS_03-13${SCREENSHOT_NAME_POSTFIX}</arg>
+</arguments>
+<msg timestamp="20210513 20:39:07.649" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/TS_03-13-screenshot.png"&gt;&lt;img src="../screenshots/TS_03-13-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210513 20:39:07.084" endtime="20210513 20:39:07.649"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20210513 20:39:07.650" endtime="20210513 20:39:09.665"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:07.083" endtime="20210513 20:39:09.666"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:38:58.018" endtime="20210513 20:39:09.666" critical="yes"></status>
+</test>
+<kw name="TS_03 Postcondition" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210513 20:39:09.671" endtime="20210513 20:39:09.931"></status>
+</kw>
+<status status="PASS" starttime="20210513 20:39:09.670" endtime="20210513 20:39:09.932"></status>
+</kw>
+<doc>Tato testovaci sada overi spravnou funkcnost navigace na webove strance jlcpcb.com</doc>
+<metadata>
+<item name="Author">Martin Krcma</item>
+</metadata>
+<status status="PASS" starttime="20210513 20:37:48.415" endtime="20210513 20:39:09.932"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0">Critical Tests</stat>
+<stat pass="10" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" id="s1" name="TS 03">TS 03</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

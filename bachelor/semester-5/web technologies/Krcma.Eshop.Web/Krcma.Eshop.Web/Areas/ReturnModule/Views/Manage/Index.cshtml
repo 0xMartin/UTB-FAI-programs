@@ -1,0 +1,126 @@
+﻿@model IList<ReturnProduct>
+
+@{
+    ViewData["Title"] = "Manage returns";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/homepage-styles.css">
+}
+
+<h1>Manage returns</h1>
+
+<a asp-action="EditLimits">Edit limits</a>
+<br>
+<a asp-action="ShippingDelay">Set shipping delay</a>
+<br>
+
+<h3>Waiting request</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Order Item ID</th>
+            <th scope="col">Order Number</th>
+            <th scope="col">Remaining days</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            if (Model != null)
+            {
+                for (int i = 0; i < Model.Count; ++i)
+                {
+                    if (!Model[i].Processed)
+                    {
+                        <tr>
+                            <td>@Model[i].ID</td>
+                            <td>@Model[i].OrderItemID</td>
+                            @{
+                                if (Model[i].OrderItem != null)
+                                {
+                                    if (Model[i].OrderItem.Order != null)
+                                    {
+                                        <td>@Model[i].OrderItem.Order.OrderNumber</td>
+                                    }
+                                }
+                            }
+                            @{
+                                if (@Model[i].RemainingDays >= 0)
+                                {
+                                    <td>@Model[i].RemainingDays</td>
+                                }
+                                else
+                                {
+                                    <td class="text-danger">Time exceeded</td>
+                                }
+                            }
+                            <td><a class="text-success" asp-action="Approve" asp-route-ID="@Model[i].ID" onclick="return ConfirmApprove();">Approve</a></td>
+                            <td><a class="text-danger" asp-action="Disapprove" asp-route-ID="@Model[i].ID" onclick="return ConfirmDisapprove();">Disapprove</a></td>
+                        </tr>
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>
+
+<br>
+<h3>Processed</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Order Item ID</th>
+            <th scope="col">Detail</th>
+            <th scope="col">Approved</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            if (Model != null)
+            {
+                for (int i = 0; i < Model.Count; ++i)
+                {
+                    if (Model[i].Processed)
+                    {
+                        <tr>
+                            <td>@Model[i].ID</td>
+                            <td>@Model[i].OrderItemID</td>
+                            @{
+                                if (Model[i].OrderItem != null)
+                                {
+                                    if (Model[i].OrderItem.Order != null)
+                                    {
+                                        <td>@Model[i].OrderItem.Order.OrderNumber</td>
+                                    }
+                                }
+                            }
+                            @{
+                                if (Model[i].Approved)
+                                {
+                                    <td class="text-success">Approved</td>
+                                }
+                                else
+                                {
+                                    <td class="text-danger">Disapproved</td>
+                                }
+
+                            }
+                        </tr>
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script src="~/js/returnModule.js"></script>
+}

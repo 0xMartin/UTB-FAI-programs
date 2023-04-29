@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Eshop</title>
+    <link rel="icon" href="~/img/icon.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow fixed-top p-0">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/icon.png" style="height: 30px">
+                    Eshop
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index" id="link_home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Product" asp-action="Shop" asp-route-PAGE="1" id="link_shop">Shop</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated == true && (User.IsInRole(Roles.Customer.ToString())))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="link_my_orders">My Orders</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="Customer" asp-controller="CustomerOrders" asp-action="Index">My Orders</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="Customer" asp-controller="CustomerOrderNotCart" asp-action="ApproveOrderInSession"><b>Approve Current Order</b></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="ReturnModule" asp-controller="Return" asp-action="Index" id="link_return">Return Product</a>
+                            </li>
+                        }
+                        @{
+                            @if (User.Identity.IsAuthenticated == true && (User.IsInRole(Roles.Admin.ToString()) || User.IsInRole(Roles.Manager.ToString())))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="link_admin">Admin</a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" asp-area="ReturnModule" asp-controller="Manage" asp-action="Index">Manage Returns</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" asp-area="Admin" asp-controller="Carousel" asp-action="Select">Carousels</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" asp-area="Admin" asp-controller="Product" asp-action="Select">Products</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" asp-area="Admin" asp-controller="Orders" asp-action="Index">Orders</a>
+                                        </li>
+                                        @if (User.IsInRole(Roles.Admin.ToString()))
+                                        {
+                                            <li class="nav-item">
+                                                <a class="nav-link text-light" asp-area="Admin" asp-controller="OrderItems" asp-action="Index">OrderItems</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-light" asp-area="Admin" asp-controller="Users" asp-action="Index">Users</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <ul class="navbar-nav navbar-right">
+                        @{
+
+                            double totalPrice = 0;
+                            string totalPriceString = "TotalPrice";
+                            if (Context.Session.IsAvailable && Context.Session.Keys.Contains(totalPriceString))
+                            {
+                                totalPrice = Context.Session.GetDouble(totalPriceString).GetValueOrDefault();
+                            }
+
+                            <li class="navbar-text"><a id="total_price" class="label" style="color:red;">@totalPrice.ToString("C2")</a></li>
+                        }
+                    </ul>
+                    @{
+                        @if (User.Identity.IsAuthenticated == false)
+                        {
+                            <ul class="navbar-nav navbar-right">
+                                <li class="nav-item"><a class="nav-link text-light" asp-area="Security" asp-controller="Account" asp-action="Register"><span class="glyphicon"></span> Sign Up</a></li>
+                                <li class="nav-item"><a class="nav-link text-light" asp-area="Security" asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Logged as @User.Identity.Name</a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li class="nav-item"><a class="nav-link text-light" asp-area="Security" asp-controller="Account" asp-action="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="particles-js"></div>
+
+    <div class="parallax">
+        <div id="body_container" class="container noparallax bg-light">
+            <main role="main" class="pb-3 pt-5 position-relative bg-light">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white py-2 position-relative">
+        <div class="container pt-1 pb-3">
+            &copy; 2022 - Eshop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/particle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/navigation.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
