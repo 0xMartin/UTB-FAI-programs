@@ -1,0 +1,217 @@
+body {
+	background-color: #f4f7f6;
+	margin-top: 20px;
+}
+
+.chat {
+	border-left: 1px solid #eaeaea;
+	overflow-y: auto;
+	height: 60vh;
+	position: relative;
+}
+
+.chat .chat-history {
+	padding: 20px;
+	height: 100%;
+}
+
+.chat .chat-history ul {
+	padding: 0
+}
+
+.chat .chat-history ul li {
+	list-style: none;
+	margin-bottom: 30px
+}
+
+.chat .chat-history ul li:last-child {
+	margin-bottom: 0px
+}
+
+.chat .chat-history .message-data {
+	margin-bottom: 15px
+}
+
+.chat .chat-history .message-data img {
+	border-radius: 40px;
+	width: 40px
+}
+
+.chat .chat-history .message-data-time {
+	color: #434651;
+	padding-left: 6px
+}
+
+.chat .chat-history .message {
+	color: #444;
+	padding: 18px 20px;
+	line-height: 26px;
+	font-size: 16px;
+	border-radius: 7px;
+	display: inline-block;
+	position: relative;
+	max-width: 40vw;
+	min-width: 10vw;
+	overflow: hidden;
+	
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+	/* Adds a hyphen where the word breaks */
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;}
+
+.chat .chat-history .my-message {
+	background: #edd1d1
+}
+
+.chat .chat-history .other-message {
+	background: #d1d6ed;
+	text-align: right
+}
+
+.chat .chat-history .other-message:after {
+	border-bottom-color: #e8f1f3;
+	left: 93%
+}
+
+.chat .chat-message {
+	padding: 20px
+}
+
+.online, .offline, .me {
+	margin-right: 2px;
+	font-size: 8px;
+	vertical-align: middle
+}
+
+.float-right {
+	float: right
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0
+}
+
+@media only screen and (max-width: 767px) {
+	.chat-app .people-list {
+		height: 465px;
+		width: 100%;
+		overflow-x: auto;
+		background: #fff;
+		left: -400px;
+		display: none
+	}
+	.chat-app .people-list.open {
+		left: 0
+	}
+	.chat-app .chat {
+		margin: 0
+	}
+	.chat-app .chat .chat-header {
+		border-radius: 0.55rem 0.55rem 0 0
+	}
+	.chat-app .chat-history {
+		height: 300px;
+		overflow-x: auto
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.chat-app .chat-list {
+		height: 650px;
+		overflow-x: auto
+	}
+	.chat-app .chat-history {
+		height: 600px;
+		overflow-x: auto
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width:
+	1024px) and (orientation: landscape) and
+	(-webkit-min-device-pixel-ratio: 1) {
+	.chat-app .chat-list {
+		height: 480px;
+		overflow-x: auto
+	}
+	.chat-app .chat-history {
+		height: calc(100vh - 350px);
+		overflow-x: auto
+	}
+}
+
+.emojipicker-container {
+    position: relative;
+}
+
+.emoji-toggle {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.4;
+}
+
+.emoji-toggle:hover {
+    opacity: 1;
+}
+
+.emoji-btn {
+    padding: 5px;
+}
+
+.emoji-btn:hover {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.emoji-window-closed {
+    display: none !important;
+}
+
+.emoji-window {
+    position: absolute;
+    padding: 5px;
+    top: 42px;
+    right: 10px;
+
+    background: white;
+    border: solid black 1px;
+    border-radius: 5px;
+
+    max-width: 200px;
+    max-height: 300px;
+    overflow-x:hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    z-index: 1000;
+}
+
+.emoji-section {
+    width: 100%;
+    font-family: sans-serif;
+    background: #eeeeee;
+    border-radius: 5px;
+    padding: 3px 0;
+    flex-grow: 1;
+    text-align: center;
+    top: 0;
+    position: sticky;
+}
+
+
+.emoji-window::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}

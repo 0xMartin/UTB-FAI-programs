@@ -41,6 +41,12 @@
 #### Advanced web technologies
 * [Final project - ASP.NET E-Shop](./bachelor/semester-5/web-technologies/Krcma.Eshop.Web)
 
+#### Network application
+* [Instant message server](./bachelor/semester-5/network-application/IM-server)
+* [Servlet - Image processing](./bachelor/semester-5/network-application/images-servlet)
+* [WebCrawler](./bachelor/semester-5/network-application/webcrawler)
+* [Ping flooder - raw socket implementation](./bachelor/semester-5/network-application/ping-flooder)
+
 ### Semester 6
 
 #### AI

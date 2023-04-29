@@ -1,0 +1,118 @@
+<!-- 
+	INFO:
+		* Aby mohl uzivatel prijimat a odesila zpravy musis se nejdriv nastavit jmeno
+		* Po nastaveni jmene za zobrazi taby s chaty, Personal slouzi jen pro prijimani soukromich zprav a info zprav ze serveru, ostatni uz predstavuji konkretni chaty
+		* Uzivatel odesila zpravu vzdy jen do te skupiny jejiz chatovaci okno ma otevrene (do chatu Personal neni mozne zpravy odesilat)
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IM Server</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<link href="./index.css" rel="stylesheet">
+<link href="./emoji.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="p-3">
+			<h1>IM SERVER</h1>
+			<div class="row">
+				<span><b>Name:</b> <span id="name"></span></span>
+			</div>
+			<div class="row">
+				<span class="font-weight-bold">Groups: </span>
+				<div id="group_list" class="d-flex flex-wrap"></div>
+			</div>
+			<form onsubmit="javascript:wsSendMessage(); return false;">
+				<div class="py-1">
+
+					<div class="emojipicker-container">
+						<input id="message" type="text" class="form-control py"
+							placeholder="Your message ...">
+					</div>
+				</div>
+				<div class="py-1 d-flex flex-wrap">
+					<div class="px-1">
+						<button onclick="wsSendMessage();" class="btn btn-primary"
+							type="button">Send</button>
+					</div>
+					<div class="px-1">
+						<button type="button" class="btn btn-primary text-white"
+							data-bs-toggle="modal" data-bs-target="#myModal"
+							onclick="modal_sendPrivate();">Send private</button>
+					</div>
+					<div class="px-1">
+						<button type="button" class="btn bg-secondary text-white"
+							data-bs-toggle="modal" data-bs-target="#myModal"
+							onclick="modal_setName();">Set name</button>
+					</div>
+					<div class="px-1">
+						<button type="button" class="btn bg-secondary text-white"
+							data-bs-toggle="modal" data-bs-target="#myModal"
+							onclick="modal_joinGroup();">Join group</button>
+					</div>
+					<div class="px-1">
+						<button type="button" class="btn bg-secondary text-white"
+							data-bs-toggle="modal" data-bs-target="#myModal"
+							onclick="modal_leaveGroup();">Leave group</button>
+					</div>
+					<div class="px-1">
+						<button onclick="wsCloseConnection();" class="btn btn-danger"
+							type="button">Disconnect</button>
+					</div>
+				</div>
+				<div class="py-1">
+					<!-- TAB header: chat -->
+					<ul class="nav nav-tabs" id="tab_chat" role="tablist"></ul>
+					<!-- TAB content: chat -->
+					<div class="tab-content" id="tab_chat_content"></div>
+
+				</div>
+			</form>
+		</div>
+
+
+		<!-- The Modal -->
+		<div class="modal" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal_title">Input dialog</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<label for="modal_input" id="modal_title">Value:</label> <input
+							type="text" class="form-control" id="modal_input"
+							placeholder="...">
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary"
+							data-bs-dismiss="modal" id="modal_ok">OK</button>
+						<button type="button" class="btn btn-danger"
+							data-bs-dismiss="modal" id="modal_close">Close</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="./index.js"></script>
+	<script src="./emoji.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+</body>
+</html>
