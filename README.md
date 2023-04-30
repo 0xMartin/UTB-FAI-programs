@@ -68,6 +68,9 @@
 #### Advanced database systems
 * [Final project - Online library web app](https://github.com/0xMartin/OnlineLibrary)
 
+#### Advanced mobile applications
+* [Final project - Photostudio](https://github.com/0xMartin/PhotoStudio)
+
 ### Semester 2
 
 #### Mathematical informatics
@@ -84,3 +87,6 @@
 
 #### Signal processing
 * [Tasks list - jupyter notebooks](./master/semester-2/signal-processing)
+
+#### Game desing
+* [Final project - Crows And Nests 3D game](https://github.com/0xMartin/CrowsAndNests)
