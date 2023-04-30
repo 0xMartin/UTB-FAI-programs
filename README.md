@@ -64,7 +64,7 @@ Whether you're a student looking for inspiration for your next project or just i
 
 #### Soft computing
 * [Statistical processing of the dataset](./master/semester-1/soft-computing/task-1)
-* [K-nearest neighbors & Naive Bayes](./master/semester-1/soft-computing/task-3)
+* [Weather Prediction - K-nearest neighbors & Naive Bayes](./master/semester-1/soft-computing/task-3)
 * [K-Means & DB-Scan](./master/semester-1/soft-computing/task-2)
 * [Page Rank Algorithm](./master/semester-1/soft-computing/task-4)
 
