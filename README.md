@@ -8,7 +8,7 @@ Whether you're a student looking for inspiration for your next project or just i
 
 ## 🎓 Bachelor's Degree
 
-### ❄️ Semester 2
+### ☀️ Semester 2
 
 #### Blender
 * [Final project - Jet figher Gripen animation](./bachelor/semester-2/Blender)
@@ -16,7 +16,7 @@ Whether you're a student looking for inspiration for your next project or just i
 * [Effective Codes](./bachelor/semester-2/Theory-of-information-transfer/effective-codes)
 * [Hamming Code](./bachelor/semester-2/Theory-of-information-transfer/hamming-code)
 
-### ☀️ Semester 3
+### ❄️ Semester 3
 
 #### Cryptology
 * [Affine Cipher](./bachelor/semester-3/cryptology/affine-cipher)
@@ -29,7 +29,7 @@ Whether you're a student looking for inspiration for your next project or just i
 #### Theoretical informatics
 * [Wolfram Mathematica tasks](./bachelor/semester-3/theoretical-informatics)
 
-### ❄️ Semester 4
+### ☀️ Semester 4
 
 #### Software testing
 * [Final project - Selenium automated tests](./bachelor/semester-4/software-testing/www-jlcpcb-com_13-05-21)
@@ -37,7 +37,7 @@ Whether you're a student looking for inspiration for your next project or just i
 #### Algorithms and data structures
 * [Final project - Tic Tac Toe + AI + Engine](https://github.com/0xMartin/TicTacToe)
 
-### ☀️ Semester 5
+### ❄️ Semester 5
 #### Mobile apps
 * [Final project - COVID19](./bachelor/semester-5/mobile-apps/COVID19)
 
@@ -53,14 +53,14 @@ Whether you're a student looking for inspiration for your next project or just i
 * [WebCrawler](./bachelor/semester-5/network-application/webcrawler)
 * [Ping flooder - raw socket implementation](./bachelor/semester-5/network-application/ping-flooder)
 
-### ❄️ Semester 6
+### ☀️ Semester 6
 
 #### AI
 * [L-Systems 2D & 3D](./bachelor/semester-6/AI/L-systems)
 * [2048 Game + AI](./bachelor/semester-6/AI/2048)
 
 ## Master's Degree 🎓
-### ☀️ Semester 1
+### ❄️ Semester 1
 
 #### Soft computing
 * [Statistical processing of the dataset](./master/semester-1/soft-computing/task-1)
@@ -77,7 +77,7 @@ Whether you're a student looking for inspiration for your next project or just i
 #### Advanced mobile applications
 * [Final project - Photostudio](https://github.com/0xMartin/PhotoStudio)
 
-### ❄️ Semester 2
+### ☀️ Semester 2
 
 #### Mathematical informatics
 * [Tasks list - jupyter notebooks](./master/semester-2/mathematical-informatics)
