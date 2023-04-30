@@ -1,13 +1,11 @@
-# Efektivní kódy
-A2TPI Semestrální projekt č. 4
+# Effective Codes
 
-## Popis
-Program je určen pro kódovanými textu pomocí metody efektivního kódovaní. Program umožnuje kódovat text Shannon–Fanovu metodu nebo metodu Huffmanovu. 
+[GO BACK](https://github.com/0xMartin/UTB-FAI-programs)
 
-<img src="https://github.com/0xMartin/EffectiveCodes/blob/master/img/img1.PNG" width=70%>
+## Description
+This program is designed for encoding text using the method of effective coding. The program allows for encoding text using either the Shannon-Fano method or the Huffman method.
 
-
-<img src="https://github.com/0xMartin/EffectiveCodes/blob/master/img/img2.PNG" width=70%>
-
-## Author
-* Martin Krčma
+<div>
+<img src="./img/img1.PNG" width=48%>
+<img src="./img/img2.PNG" width=48%>
+</div>

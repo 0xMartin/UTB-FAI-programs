@@ -1,6 +1,6 @@
 # Jet Fighter Gripen Animation
 
-[GO BACK](../../../)
+[GO BACK](https://github.com/0xMartin/UTB-FAI-programs)
 
 This project showcases an animation of the flight of the JAS 39 Gripen jet fighter, created using Blender. The animation was created as a final project for the Blender course in the second semester of the Bachelor's degree program at UTB FAI.
 
