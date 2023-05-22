@@ -32,7 +32,7 @@ Whether you're a student looking for inspiration for your next project or just i
 ### ☀️ Semester 4
 
 #### Software testing
-* [Final project - Selenium automated tests](./bachelor/semester-4/software-testing/www-jlcpcb-com_13-05-21)
+* [Final project - Selenium automated tests](./bachelor/semester-4/software-testing)
 
 #### Algorithms and data structures
 * [Final project - Tic Tac Toe + AI + Engine](https://github.com/0xMartin/TicTacToe)
