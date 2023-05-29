@@ -1,6 +1,6 @@
 # 💻 UTB FAI programs
 
-<div align="center">
+<div>
   <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/0xMartin/UTB-FAI-programs">
   <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/0xMartin/UTB-FAI-programs/total">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/0xMartin/UTB-FAI-programs">
