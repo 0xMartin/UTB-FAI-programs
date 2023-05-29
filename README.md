@@ -1,5 +1,11 @@
 # 💻 UTB FAI programs
 
+<div align="center">
+  <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/0xMartin/UTB-FAI-programs">
+  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/0xMartin/UTB-FAI-programs/total">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/0xMartin/UTB-FAI-programs">
+</div>
+
 Welcome to this Git repository, which contains a collection of interesting projects completed as part of the Bachelor's and Master's degree programs at UTB FAI. 
 
 Here you can find a range of tasks from various courses, including Blender, Cryptology, Software Testing, Mobile Apps, AI, Soft Computing, Neural Networks, and more. 
