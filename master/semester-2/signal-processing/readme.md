@@ -78,4 +78,12 @@ Pro aproximaci Fourierovy řady budeme postupně používat různý počet člen
 
 ## Task 8
 
+V této úloze jsme nejdřive generovali harmonický signál složený ze stejnosměrné složky a tří harmonických složek o různých frekvencích a amplitudách. Tento signál byl navzorkován se vzorkovací frekvencí 1024 Hz a byl složen z celkem 128 vzorku.
+
+Poté jsme provedli amplitudovou a frekvenční analýzu tohoto signálu. Nejprve jsme zobrazili vygenerovaný signál v časové oblasti. Poté jsme vypočítali a zobrazili jednostranné a oboustranné amplitudové a fázové spektrum signálu pomocí funkcí rfft fft z knihovny numpy.
+
+V dalším kroku jsme přičetli k našému puvodnímu signálu šumový signál s normálním rozdělením, nulovou střední hodnotou a standardní odchylkou rovnou 1. Tento signál jsme poté opět analyzovali a porovnali jsme jeho spektra s původním signálem.
+
+Přidání šumového signálu nejvýrazněji ovlivnilo fázové spektrum výsledného signálu. To je způsobeno tím, že k původnímu signálu bylo přidáno mnoho dalších náhodných neharmonických složek s různými amplitudami, frekvencemi a fázovými posuny. V důsledku toho ve frekvenčním spektru zanikají původní harmonické složky. Amplitudové spektrum signálu není nijak výrazně ovlivněno. To je způsobeno tím, že amplitudy náhodných signálů šumu jsou nízké a tak je stále možné ve spektru vidět harmonické složky původního signálu. Taktež je možne vidět, že přidaný šum mírně ovlivnil hodnoty harmonických složek.
+
 <img src="./img/task-8/img1.png">
