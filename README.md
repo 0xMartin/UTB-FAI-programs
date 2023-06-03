@@ -81,7 +81,7 @@ Whether you're a student looking for inspiration for your next project or just i
 * [Final project - Online library web app](https://github.com/0xMartin/OnlineLibrary)
 
 #### Advanced mobile applications
-* [Final project - Photostudio](https://github.com/0xMartin/PhotoStudio)
+* [Final project - Photostudio & TensorFlow](https://github.com/0xMartin/PhotoStudio)
 
 ### ☀️ Semester 2
 
