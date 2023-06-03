@@ -54,6 +54,28 @@ The input signals used in this code are defined as numpy arrays u and g. The con
 
 ## Task 6
 
+První úloha se zabývá úpravou audiosignálu pro dosažení efektu ozvěny s určitými parametry. Máme k dispozici audiosignál "voice_short.wav", který chceme upravit. Úprava spočívá v přidání ozvěny, která začíná po 1 sekundě záznamu a má poloviční intenzitu (hlasitost) oproti originálu.
+
+Pro dosažení tohoto efektu budeme využívat konvoluci. V jazyce Matlab použijeme funkci conv pro konvoluci původního audiosignálu u(n) s impulsní odezvou (filtrem) g(n). Tímto výpočtem získáme modifikovaný signál y(n).
+
+<img src="./img/task-6/img1.png">
+
+Druhá úloha se zaměřuje na modifikaci obrazového signálu "fruit_grey.jpg" pomocí 2D konvoluce a impulsních odezev (kernelů či masek) pro rozostření a zvýraznění hran.
+
+Pro úpravu obrazu použijeme funkci conv2 vlastní implementace. Budeme aplikovat konvoluci s předem definovanými impulsními odezvami (kernely či masky). Úkolem je provést rozostření a zvýraznění hran obrazu.
+
+<img src="./img/task-6/img2.png">
+
 ## Task 7
 
+Úloha spočívá v aproximaci daného periodického signálu y(t) pomocí Fourierovy řady. Konkrétně se jedná o signál y(t) = t, kde t je v rozsahu <-pi, +pi>.
+
+Pro výpočet koeficientů Fourierovy řady dle zadání je potřeba vytvořit vhodný algoritmus. Tento algoritmus bude sloužit k výpočtu koeficientů Fourierovy řady na základě zadaného signálu y(t).
+
+Pro aproximaci Fourierovy řady budeme postupně používat různý počet členů. Konkrétně budeme aproximovat pro N = 5, 10 a 30 členů. Graficky zobrazíme 3 periody signálu, abychom mohli porovnat aproximované průběhy s původním signálem.
+
+<img src="./img/task-7/img1.png">
+
 ## Task 8
+
+<img src="./img/task-8/img1.png">
