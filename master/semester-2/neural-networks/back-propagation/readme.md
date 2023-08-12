@@ -61,7 +61,6 @@ This is a custom implementation of a neural network with back propagation algori
 1. Run the code using python main.py
 
 ## Input Data
-
 The code includes two examples of input data: xor.csv and data.csv. The xor.csv file contains a two-dimensional input dataset with a binary output, while the data.csv file contains a three-dimensional input dataset with a continuous output.
 
 ## Training the Network
@@ -73,7 +72,6 @@ The testNetwork function trains the neural network on the input data using the b
     epochs: the number of training epochs to run
 
 ## Results
-
 The trained neural network's weights are printed to the console, and a graph of the global error history is displayed. Additionally, a 3D visualization of the neural network's output function is shown.
 
 ### XOR

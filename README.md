@@ -92,15 +92,12 @@ Whether you're a student looking for inspiration for your next project or just i
 * [Perceptron](./master/semester-2/neural-networks/perceptron)
 * [Back propagation](./master/semester-2/neural-networks/back-propagation)
 * [Spam classifier](./master/semester-2/neural-networks/spam-classifier)
-* Convolutional networks
-* Deep Learning Pipeline
-* CNN visualization + Deepdream
+* [Convolutional networks](./master/semester-2/neural-networks/convolutional-networks) 
+* [Deep Learning Pipeline](./master/semester-2/neural-networks/deep-learning-pipeline)
+* [CNN visualization + Deepdream](./master/semester-2/neural-networks/CNN-visualization-deepdream) 
 
 #### Parallel processes
-* [Calculation of PI](./master/semester-2/parallel-processes/task-1)
-* [Qt simple game](./master/semester-2/parallel-processes/task-2)
-* Using threads for time-consuming background calculations
-* OMP PI Calculation
+* [Tasks list - programs](./master/semester-2/parallel-processes/)
 
 #### Signal processing
 * [Tasks list - jupyter notebooks](./master/semester-2/signal-processing)

@@ -48,3 +48,34 @@ The output of each heuristic is the best found parameter values and the value of
     <img src="./img/task-3/img1.png" width="48%">
     <img src="./img/task-3/img2.png" width="48%">
 </div>
+
+## Task 4
+
+This task contains an implementation aimed at solving the knapsack problem with a unique twist. In this problem, a set of items is generated, each belonging to a specific category. Each item within a category is identified by its ID and possesses distinct weight and value attributes. The objective is to select a combination of items for the knapsack such that only one item is chosen from each category, the total weight does not exceed the maximum capacity of the knapsack, and the total value is maximized.
+
+#### Items (5 classes)
+<img src="./img/task-4/img1.png" width="60%">
+
+#### Best combination (for list with 12 classes)
+<img src="./img/task-4/img2.png" width="60%">
+
+#### Conclusion
+In one hour, it is possible to solve a problem with 12 categories (3 items per category) on my PC. The estimated time for solving the 12-category problem is 18.07 minutes. The actual solution time was 1422.04 seconds (23.7 minutes). For solving a problem with 13 categories, it would require approximately 2 hours.
+
+## Task 5
+
+This task serves as a comparative study between two methods for solving the knapsack problem: the brute force approach and the Hill Climbing (HC) heuristic method. The primary goal is to analyze and contrast the performance of these two techniques in solving knapsack problems efficiently.
+
+### Methods Compared
+
+1. __Brute Force Method:__ This involves systematically considering all possible combinations of items and evaluating their total value while ensuring they do not exceed the knapsack's capacity. While effective for small instances, this method becomes impractical as the problem size increases due to its exponential time complexity.
+
+1. __Hill Climbing Heuristic:__ The Hill Climbing algorithm employs a local search strategy to iteratively improve the solution. Starting from a random or initial solution, it explores neighboring solutions and moves towards the one with higher value, iteratively refining the result. Hill Climbing is often faster than brute force for larger problem instances.
+
+<div>
+    <img src="./img/task-5/img1.png" width="48%">
+    <img src="./img/task-5/img2.png" width="48%">
+</div>
+
+### Conclusion
+The comparative study between the brute force and Hill Climbing heuristic methods aims to highlight the trade-off between accuracy and computational efficiency. While the brute force method guarantees an optimal solution, the Hill Climbing heuristic offers a significantly faster approach, making it a preferable choice for larger instances of the knapsack problem. 
