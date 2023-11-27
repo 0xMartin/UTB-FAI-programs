@@ -104,3 +104,11 @@ Whether you're a student looking for inspiration for your next project or just i
 
 #### Game desing
 * [Final project - Crows And Nests 3D game](https://github.com/0xMartin/CrowsAndNests)
+
+### ❄️ Semester 3
+
+...
+
+### ☀️ Semester 4
+
+...
