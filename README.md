@@ -1,9 +1,11 @@
-# 💻 UTB FAI programs
-
-<div>
-  <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/0xMartin/UTB-FAI-programs">
-  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/0xMartin/UTB-FAI-programs/total">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/0xMartin/UTB-FAI-programs">
+<div align="center">
+  <img src="logo.jpg">
+  <h1>💻 UTB FAI programs</h1>
+  <div>
+    <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/0xMartin/UTB-FAI-programs">
+    <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/0xMartin/UTB-FAI-programs/total">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/0xMartin/UTB-FAI-programs">
+  </div>
 </div>
 
 Welcome to this Git repository, which contains a collection of interesting projects completed as part of the Bachelor's and Master's degree programs at UTB FAI. 
