@@ -43,7 +43,7 @@ Whether you're a student looking for inspiration for your next project or just i
 * [Final project - Selenium automated tests](./bachelor/semester-4/software-testing)
 
 #### Algorithms and data structures
-* [Final project - Tic Tac Toe + AI + Engine](https://github.com/0xMartin/TicTacToe)
+* [Final project - Tic Tac Toe + AI + Engine (External repository)](https://github.com/0xMartin/TicTacToe)
 
 ### ❄️ Semester 5
 #### Mobile apps
@@ -77,13 +77,13 @@ Whether you're a student looking for inspiration for your next project or just i
 * [Page Rank Algorithm](./master/semester-1/soft-computing/task-4)
 
 #### Multiplatform programming
-* [Final project -  Bitmap Editor in QT framework](https://github.com/0xMartin/QtBitmapEditor)
+* [Final project -  Bitmap Editor in QT framework (External repository)](https://github.com/0xMartin/QtBitmapEditor)
 
 #### Advanced database systems
-* [Final project - Online library web app](https://github.com/0xMartin/OnlineLibrary)
+* [Final project - Online library web app (External repository)](https://github.com/0xMartin/OnlineLibrary)
 
 #### Advanced mobile applications
-* [Final project - Photostudio & TensorFlow](https://github.com/0xMartin/PhotoStudio)
+* [Final project - Photostudio app with object recognition (External repository)](https://github.com/0xMartin/PhotoStudio)
 
 ### ☀️ Semester 2
 
@@ -105,13 +105,13 @@ Whether you're a student looking for inspiration for your next project or just i
 * [Tasks list - jupyter notebooks](./master/semester-2/signal-processing)
 
 #### Game desing
-* [Final project - Crows And Nests 3D game](https://github.com/0xMartin/CrowsAndNests)
+* [Final project - Crows And Nests 3D game (External repository)](https://github.com/0xMartin/CrowsAndNests)
 
 ### ❄️ Semester 3
 
 #### Advanced game desing
 
-* [Final project - Doggy Man 3D (RPG GAME)](https://github.com/0xMartin/DoggyMan3D)
+* [Final project - Doggy Man 3D (RPG GAME) (External repository)](https://github.com/0xMartin/DoggyMan3D)
 
 #### Evolutionary computing
 
@@ -129,10 +129,10 @@ Whether you're a student looking for inspiration for your next project or just i
 
 #### Multimedia
 
-* [Implementation of BMP Image editor](https://github.com/0xMartin/BMPEditor)
+* [Implementation of BMP Image editor (External repository)](https://github.com/0xMartin/BMPEditor)
 
-* [Videomapping project - Zlín uprostřed světa](https://github.com/0xMartin/VideoMappingZlin)
+* [Videomapping project - Zlín uprostřed světa (External repository)](https://github.com/0xMartin/VideoMappingZlin)
 
 ### Master's Thesis
 
-* [Universal Tool for Automated Testing of Network Applications](https://github.com/0xMartin/NetworkAppTestingTool)
+* [Universal Tool for Automated Testing of Network Applications (External repository)](https://github.com/0xMartin/NetworkAppTestingTool)
