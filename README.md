@@ -107,8 +107,30 @@ Whether you're a student looking for inspiration for your next project or just i
 
 ### ❄️ Semester 3
 
-...
+#### Advanced game desing
+
+* [Final project - Doggy Man 3D (RPG GAME)](https://github.com/0xMartin/DoggyMan3D)
+
+#### Evolutionary computing
+
+* [Tasks list - jupyter notebooks](./master/semester-3/evolutionary-computing)
+
+#### Development of CUDA applications 
+
+* [Tasks list - programs](./master/semester-3/cuda)
+
+#### System simulation
+
+* [Implementation of random number generator](./master/semester-3/system-simulation/rnd_number_generator)
 
 ### ☀️ Semester 4
 
-...
+#### Multimedia
+
+* [Implementation of BMP Image editor](https://github.com/0xMartin/BMPEditor)
+
+* [Videomapping project - Zlín uprostřed světa](https://github.com/0xMartin/VideoMappingZlin)
+
+### Master's Thesis
+
+* [Universal Tool for Automated Testing of Network Applications](https://github.com/0xMartin/NetworkAppTestingTool)

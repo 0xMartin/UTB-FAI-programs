@@ -1,0 +1,1 @@
+/usr/lib/nvidia-cuda-toolkit/bin/g++ @CMakeFiles/Krcma_Ukol_1.dir/objects1.rsp -o Krcma_Ukol_1 @CMakeFiles/Krcma_Ukol_1.dir/linkLibs.rsp -L"/usr/lib/x86_64-linux-gnu/stubs" -L"/usr/lib/x86_64-linux-gnu"

@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler   -g -std=c++17 -x cu -c /home/martin/Projects/Skola/CUDA/Krcma_program_4/main.cu -o CMakeFiles/Krcma_Ukol_4.dir/main.cu.o",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/main.cu",
+  "output": "CMakeFiles/Krcma_Ukol_4.dir/main.cu.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler   -g -std=c++17 -x cu -c /home/martin/Projects/Skola/CUDA/Krcma_program_4/image_rgb.cu -o CMakeFiles/Krcma_Ukol_4.dir/image_rgb.cu.o",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/image_rgb.cu",
+  "output": "CMakeFiles/Krcma_Ukol_4.dir/image_rgb.cu.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler   -g -std=c++17 -x cu -c /home/martin/Projects/Skola/CUDA/Krcma_program_4/histogram_generator.cu -o CMakeFiles/Krcma_Ukol_4.dir/histogram_generator.cu.o",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/histogram_generator.cu",
+  "output": "CMakeFiles/Krcma_Ukol_4.dir/histogram_generator.cu.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/build",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/Krcma_Ukol_4.dir/argument_parser.cpp.o -c /home/martin/Projects/Skola/CUDA/Krcma_program_4/argument_parser.cpp",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/argument_parser.cpp",
+  "output": "CMakeFiles/Krcma_Ukol_4.dir/argument_parser.cpp.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/build",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/Krcma_Ukol_4.dir/utils/pngio.cpp.o -c /home/martin/Projects/Skola/CUDA/Krcma_program_4/utils/pngio.cpp",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_4/utils/pngio.cpp",
+  "output": "CMakeFiles/Krcma_Ukol_4.dir/utils/pngio.cpp.o"
+}
+]

@@ -1,0 +1,3 @@
+/home/martin/Projects/Skola/CUDA/Krcma_program_4/build/CMakeFiles/Krcma_Ukol_4.dir
+/home/martin/Projects/Skola/CUDA/Krcma_program_4/build/CMakeFiles/edit_cache.dir
+/home/martin/Projects/Skola/CUDA/Krcma_program_4/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/Krcma_Ukol_2.dir/main.cu.o CMakeFiles/Krcma_Ukol_2.dir/gpu_generator.cu.o CMakeFiles/Krcma_Ukol_2.dir/gpu_image.cu.o CMakeFiles/Krcma_Ukol_2.dir/utils/pngio.cpp.o -o Krcma_Ukol_2   -L/usr/lib/x86_64-linux-gnu/stubs  -lpng -lcudadevrt -lcudart_static -lrt -lpthread -ldl 

@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler   -g -std=c++17 -x cu -c /home/martin/Projects/Skola/CUDA/Krcma_program_2/main.cu -o CMakeFiles/Krcma_Ukol_2.dir/main.cu.o",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/main.cu",
+  "output": "CMakeFiles/Krcma_Ukol_2.dir/main.cu.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler   -g -std=c++17 -x cu -c /home/martin/Projects/Skola/CUDA/Krcma_program_2/gpu_generator.cu -o CMakeFiles/Krcma_Ukol_2.dir/gpu_generator.cu.o",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/gpu_generator.cu",
+  "output": "CMakeFiles/Krcma_Ukol_2.dir/gpu_generator.cu.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler   -g -std=c++17 -x cu -c /home/martin/Projects/Skola/CUDA/Krcma_program_2/gpu_image.cu -o CMakeFiles/Krcma_Ukol_2.dir/gpu_image.cu.o",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/gpu_image.cu",
+  "output": "CMakeFiles/Krcma_Ukol_2.dir/gpu_image.cu.o"
+},
+{
+  "directory": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/build",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/Krcma_Ukol_2.dir/utils/pngio.cpp.o -c /home/martin/Projects/Skola/CUDA/Krcma_program_2/utils/pngio.cpp",
+  "file": "/home/martin/Projects/Skola/CUDA/Krcma_program_2/utils/pngio.cpp",
+  "output": "CMakeFiles/Krcma_Ukol_2.dir/utils/pngio.cpp.o"
+}
+]
