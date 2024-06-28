@@ -125,6 +125,10 @@ Whether you're a student looking for inspiration for your next project or just i
 
 * [Implementation of random number generator](./master/semester-3/system-simulation/rnd_number_generator)
 
+#### Information security
+
+* [Biometrics - Simple CNN for fingerprint matching (External repository)](https://github.com/0xMartin/CNN-Fingerprint-Matching)
+
 ### ☀️ Semester 4
 
 #### Multimedia
