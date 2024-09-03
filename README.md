@@ -135,7 +135,7 @@ Whether you're a student looking for inspiration for your next project or just i
 
 * [Implementation of BMP Image editor (External repository)](https://github.com/0xMartin/BMPEditor)
 
-* [Videomapping project - Zlín uprostřed světa (External repository)](https://github.com/0xMartin/VideoMappingZlin)
+* [Videomapping project - Zlín uprostřed světa (External repository)](https://www.youtube.com/watch?v=JPxImHH-gW4)
 
 ### Master's Thesis
 
