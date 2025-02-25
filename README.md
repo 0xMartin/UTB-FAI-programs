@@ -129,7 +129,7 @@ Whether you're a student looking for inspiration for your next project or just i
 
 * [Biometrics - Simple CNN for fingerprint matching (External repository)](https://github.com/0xMartin/CNN-Fingerprint-Matching)
 
-#### iOS development
+#### iOS development
 
 * [iOS Drawing App (External repository)](https://github.com/0xMartin/iOSDrawingApp)
 
